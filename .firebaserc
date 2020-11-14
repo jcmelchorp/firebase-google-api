@@ -1,14 +1,5 @@
 {
-  "targets": {
-    "rds-firebaseui": {
-      "hosting": {
-        "firebase-google-api": [
-          "rds-firebaseui"
-        ]
-      }
-    }
-  },
   "projects": {
-    "default": "rds-firebaseui"
+    "default": "proyecto-calli"
   }
 }

@@ -7,12 +7,11 @@
   <button (click)="authService.login()">Login</button>
   <button (click)="authService.logout()">Logout</button>
   <hr>
-  <button (click)="authService.getCalendar()">Get Calendar</button>
-  <button (click)="authService.insertEvent()">Add Event</button>
-  <div *ngFor="let item of authService.calendarItems">
-    <h3>{{item.summary}} - {{item.status}}</h3>
-    <p><em>Created {{item.created}}</em></p>
-    <p>{{item.description}}</p>
+  <button (click)="authService.listCourses()">Get Calendar</button>
+  <div *ngFor="let course of (this.authService.courses$|async)">
+    <h3>{{course.descriptionHeading}} - {{course.courseState}}</h3>
+    <p><em>Created {{course.creationTime}}</em></p>
+    <p>{{course.description}}</p>
     <hr>
   </div>
 </main>
