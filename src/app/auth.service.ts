@@ -3,9 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Observable } from 'rxjs';
 
-import { auth } from 'firebase/app';
-
-import { env } from 'process';
+import firebase from 'firebase';
 
 import { environment } from './../environments/environment.prod';
 
@@ -40,7 +38,7 @@ export class AuthService {
     const googleAuth = gapi.auth2.getAuthInstance();
     const googleUser = await googleAuth.signIn();
     const authResponse = googleUser.getAuthResponse(true);
-    const credential = auth.GoogleAuthProvider.credential(authResponse.id_token, authResponse.access_token);
+    const credential = firebase.auth.GoogleAuthProvider.credential(authResponse.id_token, authResponse.access_token);
     return this.afAuth.signInWithCredential(credential);
   }
 
