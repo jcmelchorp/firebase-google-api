@@ -16,7 +16,7 @@ declare var gapi;
 })
 export class AuthService {
   user$: Observable<firebase.User>;
-  classroomUser$: Observable<any>;
+  classroomUser$: any;
   calendarItems: any[];
   courses$: Observable<any[]>;
   results: any;

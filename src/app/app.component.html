@@ -18,11 +18,11 @@
         <mat-panel-title>
           {{course.name}}
         </mat-panel-title>
-        <mat-panel-description>
+        <mat-panel-description *ngIf="authService.classroomUser$ as classOwner">
+          {{classOwner.name.fullName}}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div *ngIf="authService.classroomUser$ as own">
-        Propietario de la clase: {{own.name.fullName}}
+      <div>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
