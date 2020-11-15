@@ -1,3 +1,5 @@
+import { MaterialModule } from './material.module';
+import { environment } from './../environments/environment.prod';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,27 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDk1qgWOj6c2woDFxSbPdayrpUVFv97Ejg',
-  authDomain: 'rds-firebaseui.firebaseapp.com',
-  databaseURL: 'https://rds-firebaseui.firebaseio.com',
-  projectId: 'rds-firebaseui',
-  storageBucket: 'rds-firebaseui.appspot.com',
-  messagingSenderId: '382142356931',
-  appId: '1:382142356931:web:729d21482f39ccc2093176',
-  measurementId: 'G-FKR8NGWM3R'
-};
-
-
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
   ],
   providers: [],

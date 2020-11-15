@@ -1,47 +1,6 @@
 {
   "rules": {
-    ".read": false,
-    ".write": false,
-    "items": {
-      ".read": "root.child('admins').child(auth.uid).val() === true",
-      "$item": {
-        ".write": "auth.uid == $item || root.child('admins').child(auth.uid).val() === true",
-        ".read": "auth.uid == $item || root.child('admins').child(auth.uid).val() === true"
-      }
-    },
-    "customers": {
-      ".read": "root.child('admins').child(auth.uid).val() === true",
-      "$customer": {
-        ".write": "auth.uid == $customer || root.child('admins').child(auth.uid).val() === true",
-        ".read": "auth.uid == $customer || root.child('admins').child(auth.uid).val() === true"
-      }
-    },
-    "courses": {
-      ".read": "root.child('admins').child(auth.uid).val() === true",
-      "$course": {
-        ".write": "auth.uid == $course || root.child('admins').child(auth.uid).val() === true",
-        ".read": "auth.uid == $course || root.child('admins').child(auth.uid).val() === true"
-      }
-    },
-    "quizes": {
-      ".read": "root.child('admins').child(auth.uid).val() === true",
-      "$quiz": {
-        ".write": "auth.uid == $quiz || root.child('admins').child(auth.uid).val() === true",
-        ".read": "auth.uid == $quiz || root.child('admins').child(auth.uid).val() === true"
-      }
-    },
-    "users": {
-      ".read": "root.child('admins').child(auth.uid).val() === true",
-      "$user": {
-        ".write": "auth.uid == $user || root.child('admins').child(auth.uid).val() === true",
-        ".read": "auth.uid == $user || root.child('admins').child(auth.uid).val() === true"
-      }
-    },
-    "admins": {
-      "$admin": {
-        ".write": "root.child('admins').child(auth.uid).val() === true",
-        ".read": "auth.uid == $admin || root.child('admins').child(auth.uid).val() === true"
-      }
-    }
+    ".read": "now < 1607925600000",  // 2020-12-14
+    ".write": "now < 1607925600000",  // 2020-12-14
   }
 }

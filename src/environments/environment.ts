@@ -5,23 +5,22 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyC26297xuaMm1k9O7gcwbHDTryjMr8IDNI',
-    authDomain: 'proyecto-calli.firebaseapp.com',
-    databaseURL: 'https://proyecto-calli.firebaseio.com',
-    projectId: 'proyecto-calli',
-    storageBucket: 'proyecto-calli.appspot.com',
-    messagingSenderId: '778108325369',
-    appId: '1:778108325369:web:f9727f1ea9bca74a7c8128',
-    measurementId: 'G-RCWFBBG3HQ',
+    apiKey: 'AIzaSyBeu1QgLqhkreB34hs3tvh2sPryv8pDp6Y',
+    authDomain: 'fb-goo-api.firebaseapp.com',
+    databaseURL: 'https://fb-goo-api.firebaseio.com',
+    projectId: 'fb-goo-api',
+    storageBucket: 'fb-goo-api.appspot.com',
+    messagingSenderId: '1020513677714',
+    appId: '1:1020513677714:web:c79ee8ffaad1701a49114b',
+    measurementId: 'G-PPT30G5V7L',
     clientId:
-      '778108325369-a31ggkimq8qjkv4lgnojlnsc260qmtgs.apps.googleusercontent.com',
+      '1020513677714-ofv47efcialie29s5vrn6clgc4fdphc6.apps.googleusercontent.com',
     discoveryDocs: [
       'https://classroom.googleapis.com/$discovery/rest?version=v1',
     ],
     scope: [
       'email',
       'profile',
-      'openid',
       // View and manage announcements in Google Classroom
       // 'https://www.googleapis.com/auth/classroom.announcements',
 

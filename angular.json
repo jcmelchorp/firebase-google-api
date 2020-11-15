@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firebase-google-api": {
+    "fb-goo-api": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": ["@firebase/auth","firebase/app"],
-            "outputPath": "dist/firebase-google-api",
+            "outputPath": "dist/fb-goo-api",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "firebase-google-api:build"
+            "browserTarget": "fb-goo-api:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "firebase-google-api:build:production"
+              "browserTarget": "fb-goo-api:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "firebase-google-api:build"
+            "browserTarget": "fb-goo-api:build"
           }
         },
         "test": {
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "firebase-google-api:serve"
+            "devServerTarget": "fb-goo-api:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "firebase-google-api:serve:production"
+              "devServerTarget": "fb-goo-api:serve:production"
             }
           }
         },
@@ -131,7 +131,7 @@
       }
     }
   },
-  "defaultProject": "firebase-google-api",
+  "defaultProject": "fb-goo-api",
   "cli": {
     "analytics": "a2343592-ec2b-4686-9add-6e8bd6df1d5e"
   }

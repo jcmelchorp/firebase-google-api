@@ -12,7 +12,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PROYECTO_CALLI }}'
-          projectId: proyecto-calli
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FB_GOO_API }}'
+          projectId: fb-goo-api
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels

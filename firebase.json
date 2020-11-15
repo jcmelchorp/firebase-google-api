@@ -7,7 +7,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/firebase-google-api",
+    "public": "dist/fb-goo-api",
     "ignore": [
       "firebase.json",
       "**/.*",
