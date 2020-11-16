@@ -1,0 +1,7 @@
+<div *ngIf="authService.courses==null" fxLayout="column" fxLayoutAlign="center center">
+  <mat-progress-spinner mode="indeterminate">
+  </mat-progress-spinner>
+  <span>Buscando cursos...</span><br>
+  <button mat-raised-button color="primary"
+    (click)="authService.getCourses(this.user.uid, 'TEACHER')">Reintentar</button>
+</div>

@@ -15,73 +15,58 @@ export const environment = {
       'https://classroom.googleapis.com/$discovery/rest?version=v1',
     ],
     scope: [
+      // Ver tu dirección de correo electrónico
       'email',
+      // Consultar tu información personal, incluida la que has compartido públicamente
       'profile',
-      // View and manage announcements in Google Classroom
-      // 'https://www.googleapis.com/auth/classroom.announcements',
-
-      // View announcements in Google Classroom
-      'https://www.googleapis.com/auth/classroom.announcements.readonly',
-
-      // Manage your Google Classroom classes
-      // 'https://www.googleapis.com/auth/classroom.courses',
-
-      /*   // View your Google Classroom classes */
-      'https://www.googleapis.com/auth/classroom.courses.readonly',
-
-      // Manage your course work and view your grades in Google Classroom
-      // 'https://www.googleapis.com/auth/classroom.coursework.me',
-
-      // View your course work and grades in Google Classroom
-      'https://www.googleapis.com/auth/classroom.coursework.me.readonly',
-
-      // Manage course work and grades for students in the Google Classroom classes you teach and view the course work and grades for classes you administer
-      // 'https://www.googleapis.com/auth/classroom.coursework.students',
-
-      // View course work and grades for students in the Google Classroom classes you teach or administer
-      'https://www.googleapis.com/auth/classroom.coursework.students.readonly',
-
-      // See, edit, and create classwork materials in Google Classroom
-      // 'https://www.googleapis.com/auth/classroom.courseworkmaterials',
-
-      // See all classwork materials for your Google Classroom classes
-      'https://www.googleapis.com/auth/classroom.courseworkmaterials.readonly',
-
-      // View your Google Classroom guardians
-      'https://www.googleapis.com/auth/classroom.guardianlinks.me.readonly',
-
-      // View and manage guardians for students in your Google Classroom classes
-      // 'https://www.googleapis.com/auth/classroom.guardianlinks.students',
-
-      // View guardians for students in your Google Classroom classes
+      // Asociar tu identidad a tu información personal en Google
+      'openid',
+      // Administrar tus clases de Google Classroom
+      'https://www.googleapis.com/auth/classroom.courses',
+      // Ver tus clases de Google Classroom
+      // 'https://www.googleapis.com/auth/classroom.courses.readonly',
+      // Ver los tutores de estudiantes de tus clases de Google Classroom
       'https://www.googleapis.com/auth/classroom.guardianlinks.students.readonly',
-
-      // View the email addresses of people in your classes
-      'https://www.googleapis.com/auth/classroom.profile.emails',
-
-      // View the profile photos of people in your classes
-      'https://www.googleapis.com/auth/classroom.profile.photos',
-
-      // Receive notifications about your Google Classroom data
-      // 'https://www.googleapis.com/auth/classroom.push-notifications',
-
-      // Manage your Google Classroom class rosters
+      // Ver y administrar los tutores de estudiantes de tus clases de Google Classroom
+      // 'https://www.googleapis.com/auth/classroom.guardianlinks.students',
+      // Administrar las listas de tus clases de Google Classroom
       // 'https://www.googleapis.com/auth/classroom.rosters',
-
-      // View your Google Classroom class rosters
+      // Ver las listas de tus clases de Google Classroom
       'https://www.googleapis.com/auth/classroom.rosters.readonly',
-      // View your course work and grades in Google Classroom
-      'https://www.googleapis.com/auth/classroom.student-submissions.me.readonly',
-
-      // View course work and grades for students in the Google Classroom classes you teach or administer
+      // Ver las direcciones de correo electrónico de las personas de tus clases
+      'https://www.googleapis.com/auth/classroom.profile.emails',
+      // Ver las fotos de perfil de las personas de tus clases
+      'https://www.googleapis.com/auth/classroom.profile.photos',
+      // Ver tus tutores de Google Classroom
+      'https://www.googleapis.com/auth/classroom.guardianlinks.me.readonly',
+      // Administrar el trabajo del curso y las calificaciones de los estudiantes
+      // en las clases de Google Classroom que impartes; ver el trabajo del curso
+      // y las calificaciones en las clases que administras.
+      'https://www.googleapis.com/auth/classroom.coursework.students',
+      // Ver y gestionar notificaciones de Google Classroom
+      'https://www.googleapis.com/auth/classroom.announcements',
+      // Ver instrucciones del trabajo asignado por los profesores en tus
+      // clases de Google Classroom
+      'https://www.googleapis.com/auth/classroom.course-work.readonly',
+      // Ver los trabajos y las calificaciones de los alumnos de las clases que impartes
+      // o administras en Google Classroom.
       'https://www.googleapis.com/auth/classroom.student-submissions.students.readonly',
-
-      // See, create, and edit topics in Google Classroom
-
-      // 'https://www.googleapis.com/auth/classroom.topics',
-
-      /*   // View topics in Google Classroom */
-      'https://www.googleapis.com/auth/classroom.topics.readonly',
+      // Ver los trabajos y las calificaciones de los cursos de Google Classroom
+      'https://www.googleapis.com/auth/classroom.student-submissions.me.readonly',
+      // Ver los trabajos y las calificaciones de los cursos de Google Classroom
+      'https://www.googleapis.com/auth/classroom.coursework.me',
+      // Ver notificaciones de Google Classroom
+      // 'https://www.googleapis.com/auth/classroom.announcements.readonly',
+      // Ver, editar y crear material de trabajo de clase en Google Classroom
+      'https://www.googleapis.com/auth/classroom.courseworkmaterials',
+      // Ver todo el material de trabajo de tus clases de Google Classroom
+      // 'https://www.googleapis.com/auth/classroom.courseworkmaterials.readonly',
+      // Ver, crear y editar temas en Google Classroom
+      'https://www.googleapis.com/auth/classroom.topics',
+      // Ver temas en Google Classroom
+      // 'https://www.googleapis.com/auth/classroom.topics.readonly',
+      // Recibir notificaciones sobre tus datos de Google Classroom
+      // 'https://www.googleapis.com/auth/classroom.push-notifications',
     ].join(' '),
   }
 };

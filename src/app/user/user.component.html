@@ -1,0 +1,6 @@
+<div class="p-2" *ngIf="user" fxLayout="column" fxLayoutAlign="center center">
+  <img mat-card-avatar src="{{(user.photoURL) ? user.photoURL : 'assets/dummy-user.png'}}"
+    class="img-fluid img-thumbnail rounded-circle">
+  <h3 class="text-center">{{user.displayName}}</h3>
+  <h5 class="text-center">{{user.email}}</h5>
+</div>
