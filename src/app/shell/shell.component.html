@@ -1,5 +1,6 @@
 <mat-toolbar fxLayout="row wrap" fxLayoutAlign="left center">
-  <button class="mr-2" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+  <button [ngStyle]="{'display': 'inline'}" class="mr-2" aria-label="Toggle sidenav" mat-icon-button
+    (click)="drawer.toggle()">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <button class="ml-2" mat-icon-button [routerLink]="['/']">
@@ -7,10 +8,10 @@
   </button>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  <mat-sidenav #drawer fixedInViewport class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'push' : 'side'" [opened]="(isHandset$ | async) === false">
     <div class="p-1">
-      <app-user [user]="user" *ngIf="(user$|async) as user" [routerLink]="['dashboard/',user.providerData[0].uid]"
+      <app-user [user]="user" *ngIf="(user$|async) as user" [routerLink]="['user/',user.providerData[0].uid]"
         (click)="drawer.toggle()"></app-user>
     </div>
     <mat-nav-list>
@@ -20,8 +21,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-
-    <div fxFill>
+    <div>
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   }
   onLogin() {
     this.authService.login().then(async user => {
-      await this.router.navigateByUrl('/dashboard/' + user.user.providerData[0].uid + '/STUDENT');
+      await this.router.navigateByUrl('/user/' + user.user.providerData[0].uid);
       return user;
     });
 

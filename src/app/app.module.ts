@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { MaestroComponent } from './maestro/maestro.component';
 import { ShellComponent } from './shell/shell.component';
 import { UserComponent } from './user/user.component';
+import { TrabajoComponent } from './trabajo/trabajo.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { UserComponent } from './user/user.component';
     ShellComponent,
     HomeComponent,
     DashboardComponent,
+    TrabajoComponent,
   ],
   imports: [
     BrowserModule,

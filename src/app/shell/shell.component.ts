@@ -33,7 +33,7 @@ export class ShellComponent {
   onLogin(drawer) {
     this.authService.login().then(async user => {
       drawer.toggle();
-      this.redirect = await this.router.navigateByUrl('/dashboard/' + user.user.providerData[0].uid);
+      this.redirect = await this.router.navigateByUrl('/user/' + user.user.providerData[0].uid);
     });
 
   }

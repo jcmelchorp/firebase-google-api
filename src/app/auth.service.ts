@@ -62,6 +62,15 @@ export class AuthService {
     });
   }
 
+  async getCoursework(cid: string) {
+    let params = { courseId: cid };
+    const coursesWork = await gapi.client.classroom.courses.courseWork.list(params).then(res => {
+      return res.result.courseWork;
+    });
+    console.log(coursesWork);
+    return coursesWork;
+  }
+
   async getCoursesInfo(uid?: string, role?: string) {
     let params = {};
     if (role === 'STUDENT') {

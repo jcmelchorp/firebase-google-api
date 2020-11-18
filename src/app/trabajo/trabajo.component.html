@@ -1,0 +1,11 @@
+<div class="work-container" *ngIf="courseWork===undefined">
+  No hay trabajo de clase visible.
+  <button mat-raised-button [routerLink]="['/user',route.snapshot.params.id]">Regresar</button>
+</div>
+<div *ngIf="courseWork">
+  <mat-list>
+    <div *ngFor="let work of courseWork">
+      <mat-list-item>{{work.title}}</mat-list-item>
+    </div>
+  </mat-list>
+</div>

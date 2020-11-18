@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { faCheckCircle, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { faChalkboardTeacher, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
@@ -20,9 +21,11 @@ export class DashboardComponent implements OnInit {
   userSub: Subscription;
   faChalkboardTeacher = faChalkboardTeacher;
   faCheckCircle = faCheckCircle;
+  faUserGraduate = faUserGraduate;
+  faTimesCircle = faTimesCircle;
   constructor(
     public authService: AuthService,
-    private route: ActivatedRoute
+    public route: ActivatedRoute
   ) {
     this.user$ = this.authService.user$;
 
