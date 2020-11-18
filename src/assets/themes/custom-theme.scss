@@ -1,0 +1,28 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+$custom-typography: mat-typography-config($font-family: "comfortaa");
+@include mat-core($custom-typography);
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$light-primary: mat-palette($mat-light-blue);
+$light-accent: mat-palette($mat-blue-gray, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$light-warn: mat-palette($mat-red);
+// Create the theme object (a Sass map containing all of the palettes).
+$light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($light-theme);
+// Define an alternate dark theme.
+.dark-theme {
+  color: $light-primary-text;
+  $dark-primary: mat-palette($mat-blue-grey);
+  $dark-accent: mat-palette($mat-gray, A400, A100, A700);
+  $dark-warn: mat-palette($mat-red);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+  @include angular-material-theme($dark-theme);
+}

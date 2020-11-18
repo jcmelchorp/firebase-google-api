@@ -1,4 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/themes/custom-theme.scss";
+html, body { height: 100%; background-color: #ffffff!important;}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: inherit !important;
+}
+  app-root {
+    min-height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    background-color: #ffffff!important;
+  }
+  mat-toolbar {
+    height: 50px !important;
+    background-color: #ffffff!important;
+  }
+  .mat-toolbar-multiple-rows {
+    min-height: 50px;
+    height: 50px !important;
+  }
+  mat-toolbar > .mat-toolbar-multiple-rows {
+    min-height: 50px;
+    height: 50px !important;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  }
+  mat-toolbar > .mat-toolbar-row {
+    height: 50px!important;
+    max-height: 50px!important;
+  }
+  .simple-card {
+    box-shadow: none !important;
+    background: inherit;
+    border: 1px solid lightgrey;
+    }
+

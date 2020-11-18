@@ -9,7 +9,7 @@ export const environment = {
     messagingSenderId: '1020513677714',
     appId: '1:1020513677714:web:c79ee8ffaad1701a49114b',
     measurementId: 'G-PPT30G5V7L',
-    clientId:
+    client_id:
       '1020513677714-ofv47efcialie29s5vrn6clgc4fdphc6.apps.googleusercontent.com',
     discoveryDocs: [
       'https://classroom.googleapis.com/$discovery/rest?version=v1',
@@ -26,11 +26,11 @@ export const environment = {
       // Ver tus clases de Google Classroom
       // 'https://www.googleapis.com/auth/classroom.courses.readonly',
       // Ver los tutores de estudiantes de tus clases de Google Classroom
-      'https://www.googleapis.com/auth/classroom.guardianlinks.students.readonly',
+      // 'https://www.googleapis.com/auth/classroom.guardianlinks.students.readonly',
       // Ver y administrar los tutores de estudiantes de tus clases de Google Classroom
-      // 'https://www.googleapis.com/auth/classroom.guardianlinks.students',
+      'https://www.googleapis.com/auth/classroom.guardianlinks.students',
       // Administrar las listas de tus clases de Google Classroom
-      // 'https://www.googleapis.com/auth/classroom.rosters',
+      'https://www.googleapis.com/auth/classroom.rosters',
       // Ver las listas de tus clases de Google Classroom
       'https://www.googleapis.com/auth/classroom.rosters.readonly',
       // Ver las direcciones de correo electrónico de las personas de tus clases
@@ -47,12 +47,12 @@ export const environment = {
       'https://www.googleapis.com/auth/classroom.announcements',
       // Ver instrucciones del trabajo asignado por los profesores en tus
       // clases de Google Classroom
-      'https://www.googleapis.com/auth/classroom.course-work.readonly',
+      // 'https://www.googleapis.com/auth/classroom.course-work.readonly',
       // Ver los trabajos y las calificaciones de los alumnos de las clases que impartes
       // o administras en Google Classroom.
-      'https://www.googleapis.com/auth/classroom.student-submissions.students.readonly',
+      // 'https://www.googleapis.com/auth/classroom.student-submissions.students.readonly',
       // Ver los trabajos y las calificaciones de los cursos de Google Classroom
-      'https://www.googleapis.com/auth/classroom.student-submissions.me.readonly',
+      // 'https://www.googleapis.com/auth/classroom.student-submissions.me.readonly',
       // Ver los trabajos y las calificaciones de los cursos de Google Classroom
       'https://www.googleapis.com/auth/classroom.coursework.me',
       // Ver notificaciones de Google Classroom
@@ -66,7 +66,7 @@ export const environment = {
       // Ver temas en Google Classroom
       // 'https://www.googleapis.com/auth/classroom.topics.readonly',
       // Recibir notificaciones sobre tus datos de Google Classroom
-      // 'https://www.googleapis.com/auth/classroom.push-notifications',
+      'https://www.googleapis.com/auth/classroom.push-notifications',
     ].join(' '),
   }
 };

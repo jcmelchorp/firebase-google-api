@@ -1,34 +1,37 @@
 <!-- <mat-progress-bar *ngIf="authService.isQuery" class="p-0 m-0" mode="query"></mat-progress-bar> -->
-<div *ngIf="authService.courses==null" fxLayout="column" fxLayoutAlign="center center">
+<div *ngIf="authService.courses$==null" fxLayout="column" fxLayoutAlign="center center">
   <mat-progress-spinner mode="indeterminate">
   </mat-progress-spinner>
   <span>Buscando cursos...</span><br>
-  <button mat-raised-button color="primary"
-    (click)="authService.getCourses(this.user.uid, 'STUDENT')">Reintentar</button>
+
+  <button mat-raised-button color="primary" (click)="authService.getCourses(user.uid, 'STUDENT')">Reintentar</button>
+
 </div>
-<div *ngIf="authService.courses!=null">
+<div>
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let course of this.authService.courses" [class.mat-elevation-z10]="panelOpenState"
-      (opened)="onExpand(course.id,course.ownerId)" (closed)="onContract()">
+    <button mat-raised-button color="primary" (click)="loadTeacherInfo(user.uid)">get Teacher's Info</button>
+    <mat-expansion-panel *ngFor="let course of this.authService.courses$">
       <mat-expansion-panel-header>
         <mat-panel-title>
           {{course.name}}
         </mat-panel-title>
         <mat-panel-description>
-          {{course.id}}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div *ngIf="panelOpenState && authService.classroomUser as classOwner">
+
+
+      <div>
         <mat-card>
           <mat-card-header>
-            <img mat-card-avatar
-              src="{{(classOwner.profile.photoUrl) ? classOwner.profile.photoUrl : 'assets/dummy-user.png'}}">
-            <mat-card-title>{{classOwner.profile.name.fullName}}
+            <img mat-card-avatar src="">
+            <mat-card-title>
             </mat-card-title>
-            <mat-card-subtitle>{{classOwner.profile.emailAddress}}</mat-card-subtitle>
+            <mat-card-subtitle>
+
+            </mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-
+            <!--  {{classOwner.profile.photoUrl}} -->
           </mat-card-content>
           <mat-card-actions align="end">
 

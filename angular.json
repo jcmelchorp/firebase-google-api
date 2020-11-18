@@ -30,7 +30,6 @@
             ],
             "styles": [
               "./node_modules/bootstrap/scss/bootstrap.scss",
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -95,7 +94,6 @@
             ],
             "styles": [
               "./node_modules/bootstrap/scss/bootstrap.scss",
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []

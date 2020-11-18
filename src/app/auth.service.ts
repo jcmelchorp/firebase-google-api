@@ -1,6 +1,7 @@
 import { Router, Routes } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { NONE_TYPE } from '@angular/compiler';
 
 import { Observable } from 'rxjs';
 
@@ -10,7 +11,7 @@ import 'firebase/auth';
 import { environment } from './../environments/environment';
 
 import { CourseInfo } from './course-info.model';
-
+/// <reference path="../../node_modules/@types/gapi/index.d.ts" />
 declare var gapi;
 
 @Injectable({
@@ -19,7 +20,6 @@ declare var gapi;
 export class AuthService {
   user$: Observable<firebase.User>;
   classroomUser: any;
-  calendarItems: any[];
   courses$: Observable<any[]>;
   courses: any[];
   results: any;
@@ -37,11 +37,15 @@ export class AuthService {
       console.log('loaded client');
       gapi.client.init({
         apiKey: environment.firebaseConfig.apiKey,
-        clientId: environment.firebaseConfig.clientId,
+        client_id: environment.firebaseConfig.client_id,
         discoveryDocs: environment.firebaseConfig.discoveryDocs,
-        scope: environment.firebaseConfig.scope
+        scope: environment.firebaseConfig.scope,
+        privacy_policy: 'https://fb-goo-api.web.app/privacy-policy'
       });
-      gapi.client.load('classroom', 'v1', () => console.log('loaded classroom'));
+      gapi.client.load('classroom', 'v1', () => {
+        console.log('loaded classroom');
+        //this.login();
+      });
     });
   }
   async login() {
@@ -58,6 +62,45 @@ export class AuthService {
     });
   }
 
+  async getCoursesInfo(uid?: string, role?: string) {
+    let params = {};
+    if (role === 'STUDENT') {
+      params = { studentId: uid };
+    } else if (role === 'TEACHER') {
+      params = { teacherId: uid };
+    } else {
+      params = {};
+    }
+    const coursesList = await gapi.client.classroom.courses.list(params).then(res => {
+      return res.result.courses;
+    });
+    let owner;
+    const coursesInfo = [];
+    coursesList.forEach(async course => {
+      owner = await gapi.client.classroom.userProfiles.get({ userId: course.ownerId }).then(own => {
+        return owner = own.result;
+      });
+      coursesInfo.push({
+        id: course.id,
+        name: course.name,
+        section: course.section,
+        desc: course.description,
+        descHeading: course.descriptionHeading,
+        creationTime: course.creationTime,
+        updateTime: course.updateTime,
+        state: course.courseState,
+        alternateLink: course.alternateLink,
+        guardiansEnabled: course.guardiansEnabled,
+        ownGivenName: owner.name.givenName,
+        ownFamilyName: owner.name.familyName,
+        ownEmail: owner.emailAddress,
+        ownPhoto: 'https:' + owner.photoUrl,
+        ownVerified: owner.verifiedTeacher,
+      });
+    });
+    return coursesInfo;
+  }
+
   async getCourses(uid?: string, role?: string) {
     /* this.isQuery = true; */
     let params = {};
@@ -70,9 +113,10 @@ export class AuthService {
     }
     return await gapi.client.classroom.courses.list(params).then(resp => {
       this.courses = resp.result.courses;
+      this.courses$ = resp.result.courses;
       /* this.isQuery = !this.isQuery; */
       return resp.result.courses;
-    }).catch(resp => {
+    }).then().catch(resp => {
       /* this.isQuery = !this.isQuery; */
       this.courses = null;
       return resp.error;

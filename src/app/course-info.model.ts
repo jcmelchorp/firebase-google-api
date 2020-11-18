@@ -8,12 +8,17 @@ export class CourseInfo {
   state: string;
   desc: string;
   descHeading: string;
-  owner: Observable<UserProfile[]>;
-  teachers: Observable<UserProfile[]>;
+  owner: UserInfo;
+  teachers: UserInfo[];
   section: string;
   createdDate: Date;
   update: Date;
   guardEnable: boolean;
   link: string;
+}
 
+export class UserInfo {
+  name: string;
+  email: string;
+  photoUrl: string;
 }
