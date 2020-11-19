@@ -9,16 +9,13 @@
     <div class="p-2" *ngIf="(user$|async)">
       <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
         <div fxFlex="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
-          <app-user [user]="user$|async"></app-user>
+          <app-user [user]="(user$|async)"></app-user>
         </div>
-        <div fxFlex="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
-          <mat-card class="simple-card">
-
-          </mat-card>
+        <div *ngIf="(clase$|async)" fxFlex="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
+          <app-clase></app-clase>
         </div>
       </div>
-      <router-outlet>
-      </router-outlet>
+      <router-outlet></router-outlet>
       <!-- <app-clases [coursesInfo]="coursesInfo"></app-clases> -->
     </div>
   </div>

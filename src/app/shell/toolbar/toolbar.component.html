@@ -1,10 +1,17 @@
-<mat-toolbar *ngIf="user" fxLayout="row wrap" fxLayoutAlign="left center">
-  <mat-toolbar-row>
-    <button class="mr-2" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSidenav.emit()">
-      <fa-icon [icon]="faBars"></fa-icon>
-    </button>
-    <button class="ml-2" mat-icon-button [routerLink]="['user',user.providerData[0].uid]">
-      <img class="img-fluid rounded-circle" src="{{(user.photoURL) ? user.photoURL : 'assets/images/dummy-user.png'}}">
-    </button>
+<mat-toolbar *ngIf="user">
+  <mat-toolbar-row fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <div fxLayoutAlign="left center">
+      <button class="mr-2" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSidenav.emit()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+      <button class="ml-2" mat-icon-button [routerLink]="['user',user.providerData[0].uid]">
+        <img class="img-fluid rounded-circle"
+          src="{{(user.photoURL) ? user.photoURL : 'assets/images/dummy-user.png'}}">
+      </button>
+    </div>
+    <div>
+      (Colores para propositos de diseño)
+    </div>
   </mat-toolbar-row>
+
 </mat-toolbar>

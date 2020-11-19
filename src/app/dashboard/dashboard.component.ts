@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import firebase from 'firebase/app';
@@ -12,16 +12,21 @@ import { AuthService } from './../auth.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
   user$: Observable<firebase.User>;
+  clase$: Observable<any>;
   userSub: Subscription;
-
+  claseSub: Subscription;
   constructor(
     public authService: AuthService,
     public route: ActivatedRoute
   ) {
     this.user$ = this.authService.user$;
+    this.clase$ = this.authService.clase$;
   }
   ngOnInit() {
+  }
+  ngOnDestroy() {
+
   }
 }

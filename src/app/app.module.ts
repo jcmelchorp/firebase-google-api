@@ -19,6 +19,7 @@ import { AuthService } from './auth.service';
 import { MaterialModule } from './material.module';
 
 import { AlumnoComponent } from './alumno/alumno.component';
+import { ClaseComponent } from './clase/clase.component';
 import { ClasesComponent } from './clases/clases.component';
 import { ClassroomComponent } from './classroom/classroom.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -29,7 +30,6 @@ import { TrabajoClaseListaComponent } from './trabajo-clase-lista/trabajo-clase-
 import { TrabajoClaseComponent } from './trabajo-clase/trabajo-clase.component';
 import { TrabajoComponent } from './trabajo/trabajo.component';
 import { UserComponent } from './user/user.component';
-import { SidenavComponent } from './shell/sidenav/sidenav.component';
 import { ToolbarComponent } from './shell/toolbar/toolbar.component';
 
 
@@ -46,9 +46,9 @@ import { ToolbarComponent } from './shell/toolbar/toolbar.component';
     TrabajoComponent,
     TrabajoClaseComponent,
     TrabajoClaseListaComponent,
-    SidenavComponent,
     ToolbarComponent,
     ClasesComponent,
+    ClaseComponent,
   ],
   imports: [
     BrowserModule,

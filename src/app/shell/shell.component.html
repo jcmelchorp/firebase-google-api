@@ -1,6 +1,7 @@
-<app-toolbar [user]="user$ | async" (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+<app-toolbar [user]="user$ | async" (toggleSidenav)="sidenav.toggle()">
+</app-toolbar>
 <mat-sidenav-container autosize>
-  <mat-sidenav #sidenav [ngStyle]="{ 'background-color': 'seagreen', 'min-height': '700px' }"
+  <mat-sidenav #sidenav [ngStyle]="{ 'background-color': 'lightgreen', 'border': 'none' }"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false">
     <mat-nav-list>

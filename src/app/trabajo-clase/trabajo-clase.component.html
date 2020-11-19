@@ -6,7 +6,13 @@
       <span>Buscando trabajo de clase...</span><br>
     </div>
     <div *ngIf="courseWork">
-      <app-trabajo-clase-lista [data]="courseWork"></app-trabajo-clase-lista>
+      <button mat-icon-button [routerLink]="['/user',userId]">
+        <fa-icon [icon]="faChevronLeft"></fa-icon>&nbsp;Volver
+      </button>
+      <div *ngIf="courseWork.length==0" fxLayout="row flex" fxLayoutAlign="center center">
+        No se encontró trabajo de clase
+      </div>
+      <app-trabajo-clase-lista *ngIf="courseWork.length!=0" [data]="courseWork"></app-trabajo-clase-lista>
     </div>
   </mat-card>
 </div>

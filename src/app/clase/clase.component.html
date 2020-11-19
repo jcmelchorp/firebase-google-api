@@ -1,0 +1,11 @@
+<div *ngIf="!course" fxLayout="column" fxLayoutAlign="center center">
+  <mat-spinner strokeWidth="3" [diameter]="50">
+  </mat-spinner>
+  <span>Buscando clase...</span><br>
+</div>
+<mat-card class="simple-card" *ngIf="course" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card-title>{{course.name}}</mat-card-title>
+  <mat-card-subtitle>
+    {{course.section}}
+  </mat-card-subtitle>
+</mat-card>

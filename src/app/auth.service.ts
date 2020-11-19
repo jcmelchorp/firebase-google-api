@@ -1,7 +1,7 @@
 import { Router, Routes } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { NONE_TYPE } from '@angular/compiler';
+import { analyzeAndValidateNgModules, NONE_TYPE } from '@angular/compiler';
 import { getLocaleDateFormat } from '@angular/common';
 
 import { Observable } from 'rxjs';
@@ -20,6 +20,7 @@ declare var gapi;
 })
 export class AuthService {
   user$: Observable<firebase.User>;
+  clase$: Observable<any>;
   classroomUser: any;
   courses$: Observable<any[]>;
   courses: any[];
@@ -66,13 +67,27 @@ export class AuthService {
 
   async getCoursework(cid: string) {
     let params = { courseId: cid };
-    const coursesWork = await gapi.client.classroom.courses.courseWork.list(params).then(res => {
-      return res.result.courseWork;
+    let coursesWork = await gapi.client.classroom.courses.courseWork.list(params).then(res => {
+      if (res.result.courseWork !== []) {
+        return res.result.courseWork;
+      } else {
+        return [];
+      }
+    }).catch(err => {
+      //console.log(err)
+      return [];
     });
-    console.log(coursesWork);
+    // console.log(coursesWork);
+    if (coursesWork === undefined) {
+      coursesWork = [];
+    }
     return coursesWork;
   }
-
+  /**
+   * A promise to retrive a CourseWork[] as any according to permissions access user logged in Google Classroom
+   * @param uid User UID from providerData on Google SignIn firebase.User
+   * @param role (Optional) string as selector to filter the response to those courses in role. Could be 'STUDENT' or 'TEACHER'
+   */
   async getCoursesInfo(uid?: string, role?: string) {
     let params = {};
     if (role === 'STUDENT') {
@@ -88,12 +103,13 @@ export class AuthService {
       }
     });
     let owner;
+    let courseInfo;
     const coursesInfo = [];
     coursesList.forEach(async course => {
       owner = await gapi.client.classroom.userProfiles.get({ userId: course.ownerId }).then(own => {
         return owner = own.result;
       });
-      coursesInfo.push({
+      courseInfo = {
         id: course.id,
         name: course.name,
         section: course.section,
@@ -109,9 +125,21 @@ export class AuthService {
         ownEmail: owner.emailAddress,
         ownPhoto: 'https:' + owner.photoUrl,
         ownVerified: owner.verifiedTeacher,
-      });
+      };
+      coursesInfo.push(courseInfo);
     });
     return coursesInfo;
+  }
+  async getCourseInfo(cid: string) {
+    const params = { id: cid };
+    const courseInfo = await gapi.client.classroom.courses.get(params).then(res => {
+      if (res !== []) {
+        return res.result.courses;
+      } else {
+        return [];
+      }
+    });
+    return this.clase$ = courseInfo;
   }
 
   async getCourses(uid?: string, role?: string) {

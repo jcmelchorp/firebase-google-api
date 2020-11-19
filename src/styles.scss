@@ -11,11 +11,11 @@ body {
     overflow: hidden;
     display: block;
     position: relative;
-    background-color: #ffffff!important;
+    background-color:lightpink!important;
   }
   mat-toolbar {
     height: 50px !important;
-    background-color: #ffffff!important;
+    background-color: inherit;
   }
   .mat-toolbar-multiple-rows {
     min-height: 50px;
@@ -29,6 +29,7 @@ body {
   mat-toolbar > .mat-toolbar-row {
     height: 50px!important;
     max-height: 50px!important;
+    background-color: lightyellow!important;
   }
   .simple-card {
     box-shadow: none !important;

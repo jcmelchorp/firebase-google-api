@@ -1,16 +1,16 @@
 <form [formGroup]="searchForm" class="search__form">
 
   <!-- <mat-form-field class="search__form_field" appearance="outline">
-    <mat-label>Departure station</mat-label>
-    <input type="text" aria-label="Departure station" matInput formControlName="departureStation"
-      (keyup)="applyFilter()">
-  </mat-form-field>
+      <mat-label>Departure station</mat-label>
+      <input type="text" aria-label="Departure station" matInput formControlName="departureStation"
+        (keyup)="applyFilter()">
+    </mat-form-field>
 
-   <mat-form-field class="search__form_field" appearance="outline">
-    <mat-label>Arrival station</mat-label>
-    <input type="text" aria-label="Arrival station" matInput formControlName="arrivalStation" (keyup)="applyFilter()">
-  </mat-form-field>
- -->
+     <mat-form-field class="search__form_field" appearance="outline">
+      <mat-label>Arrival station</mat-label>
+      <input type="text" aria-label="Arrival station" matInput formControlName="arrivalStation" (keyup)="applyFilter()">
+    </mat-form-field>
+   -->
   <mat-form-field class="search__form_field" appearance="outline">
     <mat-label>Fecha de Creación</mat-label>
     <input matInput formControlName="creationTimeSearch" [matDatepicker]="picker" (dateInput)="applyFilter()">
