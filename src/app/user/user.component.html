@@ -1,3 +1,8 @@
+<div *ngIf="!user" fxLayout="column" fxLayoutAlign="center center">
+  <mat-spinner strokeWidth="3" [diameter]="50">
+  </mat-spinner>
+  <span>Buscando usuario...</span><br>
+</div>
 <mat-card class="simple-card" *ngIf="user" fxLayout="column" fxLayoutAlign="center center">
   <img mat-card-avatar src="{{(user.photoURL) ? user.photoURL : 'assets/images/dummy-user.png'}}">
   <h3 class="text-center">{{user.displayName}}</h3>

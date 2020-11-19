@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 
@@ -15,6 +15,7 @@ import { AuthService } from './../auth.service';
   styleUrls: ['./shell.component.scss']
 })
 export class ShellComponent {
+  @ViewChild('nav') sidenav;
   user$: Observable<firebase.User>;
   redirect = false;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -22,7 +23,6 @@ export class ShellComponent {
       map(result => result.matches),
       shareReplay()
     );
-
   constructor(
     private router: Router,
     public authService: AuthService,
@@ -30,6 +30,11 @@ export class ShellComponent {
   ) {
     this.user$ = this.authService.user$;
   }
+
+  onToggle() {
+    this.sidenav.toggle()
+  }
+
   onLogin(drawer) {
     this.authService.login().then(async user => {
       drawer.toggle();

@@ -1,0 +1,43 @@
+<form [formGroup]="searchForm" class="search__form">
+
+  <!-- <mat-form-field class="search__form_field" appearance="outline">
+    <mat-label>Departure station</mat-label>
+    <input type="text" aria-label="Departure station" matInput formControlName="departureStation"
+      (keyup)="applyFilter()">
+  </mat-form-field>
+
+   <mat-form-field class="search__form_field" appearance="outline">
+    <mat-label>Arrival station</mat-label>
+    <input type="text" aria-label="Arrival station" matInput formControlName="arrivalStation" (keyup)="applyFilter()">
+  </mat-form-field>
+ -->
+  <mat-form-field class="search__form_field" appearance="outline">
+    <mat-label>Fecha de Creación</mat-label>
+    <input matInput formControlName="creationTimeSearch" [matDatepicker]="picker" (dateInput)="applyFilter()">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</form>
+<table mat-table class="full-width-table" matSort aria-label="Elements">
+  <!-- Id Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+    <td mat-cell *matCellDef="let row">{{row.id}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+    <td mat-cell *matCellDef="let row">{{row.title}}</td>
+  </ng-container>
+  <ng-container matColumnDef="creationTime">
+    <th mat-header-cell *matHeaderCellDef>Fecha de creación</th>
+    <td mat-cell *matCellDef="let row"> {{row.creationTime|date:'medium'}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [ngStyle]="{'background-color':'inherit'}" #paginator [length]="dataSource?.data.length" [pageIndex]="0"
+  [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100, 250]">
+</mat-paginator>

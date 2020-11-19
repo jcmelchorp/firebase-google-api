@@ -1,0 +1,12 @@
+<div class="pt-3">
+  <mat-card class="simple-card" [ngStyle]="{'min-height':'500px'}">
+    <div *ngIf="!courseWork" fxLayout="column" fxLayoutAlign="center center">
+      <mat-spinner strokeWidth="3" [diameter]="50">
+      </mat-spinner>
+      <span>Buscando trabajo de clase...</span><br>
+    </div>
+    <div *ngIf="courseWork">
+      <app-trabajo-clase-lista [data]="courseWork"></app-trabajo-clase-lista>
+    </div>
+  </mat-card>
+</div>

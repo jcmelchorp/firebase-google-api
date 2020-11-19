@@ -1,63 +1,25 @@
-<div class="p-2" *ngIf="(user$|async) as user" [ngStyle]="{'background-color': 'white !important'}">
-  <app-user [user]="user"></app-user>
-  <!--   <button mat-raised-button (click)="loadStudentCourses(user.providerData[0].uid)">Alumno</button>
- -->
+<div class="p-5">
+  <div class="h-100">
+    <div *ngIf="!(user$|async)" fxLayout="column" fxLayoutAlign="center center">
+      <mat-spinner strokeWidth="3" [diameter]="50">
+      </mat-spinner>
+      <span>Buscando...</span><br>
+      <button mat-button (click)="authService.login()">Reintentar</button>
+    </div>
+    <div class="p-2" *ngIf="(user$|async)">
+      <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
+        <div fxFlex="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
+          <app-user [user]="user$|async"></app-user>
+        </div>
+        <div fxFlex="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
+          <mat-card class="simple-card">
 
-  <mat-tab-group mat-align-tabs="center">
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <fa-icon [icon]="faUserGraduate"></fa-icon>
-        Como alumno
-      </ng-template>
-      <div class="pt-3" *ngIf="(coursesInfo) as courses" fxLayout="row wrap" fxLayout.lt-sm="column"
-        fxLayoutAlign="space-between">
-        <!-- <app-cursos-alumno [coursesInfo]="courses"></app-cursos-alumno> -->
-        <mat-card *ngFor="let course of coursesInfo" class="mb-3 simple-card" fxFlex="0 1 calc(33.3% - 10px)"
-          fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%" [ngStyle]="{'height': '200px', 'width': 'auto' }">
-          <!-- [routerLink]="[item.route_link] -->
-          <mat-card-header>
-            <img mat-card-avatar src="{{course.ownPhoto}}">
-            <mat-card-title>
-              <fa-icon class="px-1" [ngClass]="(course.state=='ACTIVE') ? 'text-success' : 'text-danger'"
-                [icon]="(course.state=='ACTIVE') ? faCheckCircle : faTimesCircle"
-                matTooltip="{{(course.state=='ACTIVE') ? 'Curso Activo' : course.state}}" matTooltipPosition="above">
-              </fa-icon>
-              {{course.name}} ({{course.section}})
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <a mat-menu-item href="{{course.alternateLink}}" target="_blank">Ir al curso</a>
-              </mat-menu>
-            </mat-card-title>
-            <mat-card-subtitle>
-              {{course.ownGivenName + ' ' + course.ownFamilyName}}
-            </mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <div fxLayout="row wrap" fxLayoutAlign="space-between top">
-              <div class="text-primary">ID: {{course.id}}</div>
-              <div>
-                <fa-icon class="px-1" [ngClass]="(course.guardiansEnabled) ? 'text-success' : 'text-danger'"
-                  [icon]="(course.guardiansEnabled) ? faChalkboardTeacher : faChalkboardTeacher"
-                  matTooltip="{{(course.state=='ACTIVE') ? 'Informe a tutores Activado' : 'Informe a tutores Desactivado'}}"
-                  matTooltipPosition="above">
-                </fa-icon>
-              </div>
-            </div>
-            <a mat-button [routerLink]="['trabajo',course.id]">Trabajo</a>
-            {{course.descHeading}}
-            {{course.desc}}
-            <!-- <p>
-              Fecha de Creación: {{course.creationTime|date:'medium'}}<br>
-              Última modificacion: {{course.updateTime|date:'medium'}}<br>
-            </p> -->
-          </mat-card-content>
-
-        </mat-card>
+          </mat-card>
+        </div>
       </div>
-    </mat-tab>
-    <mat-tab label="Como Profesor"></mat-tab>
-
-  </mat-tab-group>
+      <router-outlet>
+      </router-outlet>
+      <!-- <app-clases [coursesInfo]="coursesInfo"></app-clases> -->
+    </div>
+  </div>
 </div>

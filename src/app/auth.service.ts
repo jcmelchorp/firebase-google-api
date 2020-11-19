@@ -2,6 +2,7 @@ import { Router, Routes } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { NONE_TYPE } from '@angular/compiler';
+import { getLocaleDateFormat } from '@angular/common';
 
 import { Observable } from 'rxjs';
 
@@ -62,6 +63,7 @@ export class AuthService {
     });
   }
 
+
   async getCoursework(cid: string) {
     let params = { courseId: cid };
     const coursesWork = await gapi.client.classroom.courses.courseWork.list(params).then(res => {
@@ -81,7 +83,9 @@ export class AuthService {
       params = {};
     }
     const coursesList = await gapi.client.classroom.courses.list(params).then(res => {
-      return res.result.courses;
+      if (res !== []) {
+        return res.result.courses;
+      }
     });
     let owner;
     const coursesInfo = [];
