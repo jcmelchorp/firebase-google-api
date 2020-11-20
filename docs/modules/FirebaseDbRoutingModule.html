@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -34,7 +34,7 @@
 
 
 <ol class="breadcrumb">
-    <li>Modules</li>
+    <li>Módulos</li>
     <li>FirebaseDbRoutingModule</li>
 </ol>
 
@@ -43,16 +43,13 @@
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
 
         <p class="comment">
-            <h3>File</h3>
+            <h3>Fichero</h3>
         </p>
         <p class="comment">
             <code>src/app/firebase-db/firebase-db-routing.module.ts</code>
@@ -70,21 +67,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-
-import { FirebaseDbComponent } from &#x27;./firebase-db.component&#x27;;
-
-const routes: Routes &#x3D; [{ path: &#x27;&#x27;, component: FirebaseDbComponent }];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class FirebaseDbRoutingModule { }
-</code></pre>
-    </div>
 </div>
 
 
@@ -107,7 +89,7 @@ export class FirebaseDbRoutingModule { }
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

@@ -24,267 +24,267 @@
 <title>cluster_AppModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 2785,-268 2785,-70 8,-70"/>
 </g>
-<g id="clust20" class="cluster">
-<title>cluster_AppModule_bootstrap</title>
-<polygon fill="none" stroke="black" points="1358,-208 1358,-260 1482,-260 1482,-208 1358,-208"/>
-</g>
-<g id="clust21" class="cluster">
-<title>cluster_AppModule_providers</title>
-<polygon fill="none" stroke="black" points="2497,-78 2497,-130 2777,-130 2777,-78 2497,-78"/>
+<g id="clust18" class="cluster">
+<title>cluster_AppModule_imports</title>
+<polygon fill="none" stroke="black" points="2508,-78 2508,-130 2777,-130 2777,-78 2508,-78"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_AppModule_declarations</title>
-<polygon fill="none" stroke="black" points="293,-78 293,-130 2489,-130 2489,-78 293,-78"/>
+<polygon fill="none" stroke="black" points="304,-78 304,-130 2500,-130 2500,-78 304,-78"/>
 </g>
-<g id="clust18" class="cluster">
-<title>cluster_AppModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 285,-130 285,-78 16,-78"/>
+<g id="clust20" class="cluster">
+<title>cluster_AppModule_bootstrap</title>
+<polygon fill="none" stroke="black" points="1369,-208 1369,-260 1493,-260 1493,-208 1369,-208"/>
+</g>
+<g id="clust21" class="cluster">
+<title>cluster_AppModule_providers</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 296,-130 296,-78 16,-78"/>
 </g>
 <!-- AlumnoComponent -->
 <g id="node1" class="node">
 <title>AlumnoComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2480.72,-122 2353.28,-122 2353.28,-86 2480.72,-86 2480.72,-122"/>
-<text text-anchor="middle" x="2417" y="-99.8" font-family="Times,serif" font-size="14.00">AlumnoComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2491.72,-122 2364.28,-122 2364.28,-86 2491.72,-86 2491.72,-122"/>
+<text text-anchor="middle" x="2428" y="-99.8" font-family="Times,serif" font-size="14.00">AlumnoComponent</text>
 </g>
 <!-- AppModule -->
 <g id="node16" class="node">
 <title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="1461.66,-187 1458.66,-191 1437.66,-191 1434.66,-187 1378.34,-187 1378.34,-151 1461.66,-151 1461.66,-187"/>
-<text text-anchor="middle" x="1420" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="1472.66,-187 1469.66,-191 1448.66,-191 1445.66,-187 1389.34,-187 1389.34,-151 1472.66,-151 1472.66,-187"/>
+<text text-anchor="middle" x="1431" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
 </g>
 <!-- AlumnoComponent&#45;&gt;AppModule -->
 <g id="edge1" class="edge">
 <title>AlumnoComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M2417,-122.04C2417,-143.66 2417,-177 2417,-177 2417,-177 1471.89,-177 1471.89,-177"/>
-<polygon fill="black" stroke="black" points="1471.89,-173.5 1461.89,-177 1471.89,-180.5 1471.89,-173.5"/>
+<path fill="none" stroke="black" d="M2428,-122.04C2428,-143.66 2428,-177 2428,-177 2428,-177 1482.89,-177 1482.89,-177"/>
+<polygon fill="black" stroke="black" points="1482.89,-173.5 1472.89,-177 1482.89,-180.5 1482.89,-173.5"/>
 </g>
 <!-- AppComponent -->
 <g id="node2" class="node">
 <title>AppComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2335.94,-122 2230.06,-122 2230.06,-86 2335.94,-86 2335.94,-122"/>
-<text text-anchor="middle" x="2283" y="-99.8" font-family="Times,serif" font-size="14.00">AppComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2346.94,-122 2241.06,-122 2241.06,-86 2346.94,-86 2346.94,-122"/>
+<text text-anchor="middle" x="2294" y="-99.8" font-family="Times,serif" font-size="14.00">AppComponent</text>
 </g>
 <!-- AppComponent&#45;&gt;AppModule -->
 <g id="edge2" class="edge">
 <title>AppComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M2283,-122.13C2283,-142.57 2283,-173 2283,-173 2283,-173 1471.92,-173 1471.92,-173"/>
-<polygon fill="black" stroke="black" points="1471.92,-169.5 1461.92,-173 1471.92,-176.5 1471.92,-169.5"/>
+<path fill="none" stroke="black" d="M2294,-122.13C2294,-142.57 2294,-173 2294,-173 2294,-173 1482.92,-173 1482.92,-173"/>
+<polygon fill="black" stroke="black" points="1482.92,-169.5 1472.92,-173 1482.92,-176.5 1482.92,-169.5"/>
 </g>
 <!-- ClaseComponent -->
 <g id="node3" class="node">
 <title>ClaseComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2212.43,-122 2099.57,-122 2099.57,-86 2212.43,-86 2212.43,-122"/>
-<text text-anchor="middle" x="2156" y="-99.8" font-family="Times,serif" font-size="14.00">ClaseComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2223.43,-122 2110.57,-122 2110.57,-86 2223.43,-86 2223.43,-122"/>
+<text text-anchor="middle" x="2167" y="-99.8" font-family="Times,serif" font-size="14.00">ClaseComponent</text>
 </g>
 <!-- ClaseComponent&#45;&gt;AppModule -->
 <g id="edge3" class="edge">
 <title>ClaseComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M2156,-122.11C2156,-141.34 2156,-169 2156,-169 2156,-169 1471.68,-169 1471.68,-169"/>
-<polygon fill="black" stroke="black" points="1471.68,-165.5 1461.68,-169 1471.68,-172.5 1471.68,-165.5"/>
+<path fill="none" stroke="black" d="M2167,-122.11C2167,-141.34 2167,-169 2167,-169 2167,-169 1482.68,-169 1482.68,-169"/>
+<polygon fill="black" stroke="black" points="1482.68,-165.5 1472.68,-169 1482.68,-172.5 1482.68,-165.5"/>
 </g>
 <!-- ClasesComponent -->
 <g id="node4" class="node">
 <title>ClasesComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="2081.88,-122 1964.12,-122 1964.12,-86 2081.88,-86 2081.88,-122"/>
-<text text-anchor="middle" x="2023" y="-99.8" font-family="Times,serif" font-size="14.00">ClasesComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="2092.88,-122 1975.12,-122 1975.12,-86 2092.88,-86 2092.88,-122"/>
+<text text-anchor="middle" x="2034" y="-99.8" font-family="Times,serif" font-size="14.00">ClasesComponent</text>
 </g>
 <!-- ClasesComponent&#45;&gt;AppModule -->
 <g id="edge4" class="edge">
 <title>ClasesComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M2023,-122.27C2023,-140.56 2023,-166 2023,-166 2023,-166 1471.92,-166 1471.92,-166"/>
-<polygon fill="black" stroke="black" points="1471.92,-162.5 1461.92,-166 1471.92,-169.5 1471.92,-162.5"/>
+<path fill="none" stroke="black" d="M2034,-122.27C2034,-140.56 2034,-166 2034,-166 2034,-166 1482.92,-166 1482.92,-166"/>
+<polygon fill="black" stroke="black" points="1482.92,-162.5 1472.92,-166 1482.92,-169.5 1482.92,-162.5"/>
 </g>
 <!-- ClassroomComponent -->
 <g id="node5" class="node">
 <title>ClassroomComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1945.71,-122 1804.29,-122 1804.29,-86 1945.71,-86 1945.71,-122"/>
-<text text-anchor="middle" x="1875" y="-99.8" font-family="Times,serif" font-size="14.00">ClassroomComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1956.71,-122 1815.29,-122 1815.29,-86 1956.71,-86 1956.71,-122"/>
+<text text-anchor="middle" x="1886" y="-99.8" font-family="Times,serif" font-size="14.00">ClassroomComponent</text>
 </g>
 <!-- ClassroomComponent&#45;&gt;AppModule -->
 <g id="edge5" class="edge">
 <title>ClassroomComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1875,-122.03C1875,-139.06 1875,-162 1875,-162 1875,-162 1471.99,-162 1471.99,-162"/>
-<polygon fill="black" stroke="black" points="1471.99,-158.5 1461.99,-162 1471.99,-165.5 1471.99,-158.5"/>
+<path fill="none" stroke="black" d="M1886,-122.03C1886,-139.06 1886,-162 1886,-162 1886,-162 1482.99,-162 1482.99,-162"/>
+<polygon fill="black" stroke="black" points="1482.99,-158.5 1472.99,-162 1482.99,-165.5 1482.99,-158.5"/>
 </g>
 <!-- DashboardComponent -->
 <g id="node6" class="node">
 <title>DashboardComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1785.97,-122 1644.03,-122 1644.03,-86 1785.97,-86 1785.97,-122"/>
-<text text-anchor="middle" x="1715" y="-99.8" font-family="Times,serif" font-size="14.00">DashboardComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1796.97,-122 1655.03,-122 1655.03,-86 1796.97,-86 1796.97,-122"/>
+<text text-anchor="middle" x="1726" y="-99.8" font-family="Times,serif" font-size="14.00">DashboardComponent</text>
 </g>
 <!-- DashboardComponent&#45;&gt;AppModule -->
 <g id="edge6" class="edge">
 <title>DashboardComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1715,-122.01C1715,-138.05 1715,-159 1715,-159 1715,-159 1471.95,-159 1471.95,-159"/>
-<polygon fill="black" stroke="black" points="1471.95,-155.5 1461.95,-159 1471.95,-162.5 1471.95,-155.5"/>
+<path fill="none" stroke="black" d="M1726,-122.01C1726,-138.05 1726,-159 1726,-159 1726,-159 1482.95,-159 1482.95,-159"/>
+<polygon fill="black" stroke="black" points="1482.95,-155.5 1472.95,-159 1482.95,-162.5 1482.95,-155.5"/>
 </g>
 <!-- EntregasComponent -->
 <g id="node7" class="node">
 <title>EntregasComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1626.31,-122 1495.69,-122 1495.69,-86 1626.31,-86 1626.31,-122"/>
-<text text-anchor="middle" x="1561" y="-99.8" font-family="Times,serif" font-size="14.00">EntregasComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1637.31,-122 1506.69,-122 1506.69,-86 1637.31,-86 1637.31,-122"/>
+<text text-anchor="middle" x="1572" y="-99.8" font-family="Times,serif" font-size="14.00">EntregasComponent</text>
 </g>
 <!-- EntregasComponent&#45;&gt;AppModule -->
 <g id="edge7" class="edge">
 <title>EntregasComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1561,-122.12C1561,-136.78 1561,-155 1561,-155 1561,-155 1471.92,-155 1471.92,-155"/>
-<polygon fill="black" stroke="black" points="1471.92,-151.5 1461.92,-155 1471.92,-158.5 1471.92,-151.5"/>
+<path fill="none" stroke="black" d="M1572,-122.12C1572,-136.78 1572,-155 1572,-155 1572,-155 1482.92,-155 1482.92,-155"/>
+<polygon fill="black" stroke="black" points="1482.92,-151.5 1472.92,-155 1482.92,-158.5 1482.92,-151.5"/>
 </g>
 <!-- HomeComponent -->
 <g id="node8" class="node">
 <title>HomeComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1477.55,-122 1362.45,-122 1362.45,-86 1477.55,-86 1477.55,-122"/>
-<text text-anchor="middle" x="1420" y="-99.8" font-family="Times,serif" font-size="14.00">HomeComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1488.55,-122 1373.45,-122 1373.45,-86 1488.55,-86 1488.55,-122"/>
+<text text-anchor="middle" x="1431" y="-99.8" font-family="Times,serif" font-size="14.00">HomeComponent</text>
 </g>
 <!-- HomeComponent&#45;&gt;AppModule -->
 <g id="edge8" class="edge">
 <title>HomeComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1420,-122.11C1420,-122.11 1420,-140.99 1420,-140.99"/>
-<polygon fill="black" stroke="black" points="1416.5,-140.99 1420,-150.99 1423.5,-140.99 1416.5,-140.99"/>
+<path fill="none" stroke="black" d="M1431,-122.11C1431,-122.11 1431,-140.99 1431,-140.99"/>
+<polygon fill="black" stroke="black" points="1427.5,-140.99 1431,-150.99 1434.5,-140.99 1427.5,-140.99"/>
 </g>
 <!-- MaestroComponent -->
 <g id="node9" class="node">
 <title>MaestroComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1344.7,-122 1217.3,-122 1217.3,-86 1344.7,-86 1344.7,-122"/>
-<text text-anchor="middle" x="1281" y="-99.8" font-family="Times,serif" font-size="14.00">MaestroComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1355.7,-122 1228.3,-122 1228.3,-86 1355.7,-86 1355.7,-122"/>
+<text text-anchor="middle" x="1292" y="-99.8" font-family="Times,serif" font-size="14.00">MaestroComponent</text>
 </g>
 <!-- MaestroComponent&#45;&gt;AppModule -->
 <g id="edge9" class="edge">
 <title>MaestroComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1281,-122.12C1281,-136.78 1281,-155 1281,-155 1281,-155 1368.3,-155 1368.3,-155"/>
-<polygon fill="black" stroke="black" points="1368.3,-158.5 1378.3,-155 1368.3,-151.5 1368.3,-158.5"/>
+<path fill="none" stroke="black" d="M1292,-122.12C1292,-136.78 1292,-155 1292,-155 1292,-155 1379.3,-155 1379.3,-155"/>
+<polygon fill="black" stroke="black" points="1379.3,-158.5 1389.3,-155 1379.3,-151.5 1379.3,-158.5"/>
 </g>
 <!-- ShellComponent -->
 <g id="node10" class="node">
 <title>ShellComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1199.11,-122 1088.89,-122 1088.89,-86 1199.11,-86 1199.11,-122"/>
-<text text-anchor="middle" x="1144" y="-99.8" font-family="Times,serif" font-size="14.00">ShellComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1210.11,-122 1099.89,-122 1099.89,-86 1210.11,-86 1210.11,-122"/>
+<text text-anchor="middle" x="1155" y="-99.8" font-family="Times,serif" font-size="14.00">ShellComponent</text>
 </g>
 <!-- ShellComponent&#45;&gt;AppModule -->
 <g id="edge10" class="edge">
 <title>ShellComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1144,-122.01C1144,-138.05 1144,-159 1144,-159 1144,-159 1368.08,-159 1368.08,-159"/>
-<polygon fill="black" stroke="black" points="1368.08,-162.5 1378.08,-159 1368.08,-155.5 1368.08,-162.5"/>
+<path fill="none" stroke="black" d="M1155,-122.01C1155,-138.05 1155,-159 1155,-159 1155,-159 1379.08,-159 1379.08,-159"/>
+<polygon fill="black" stroke="black" points="1379.08,-162.5 1389.08,-159 1379.08,-155.5 1379.08,-162.5"/>
 </g>
 <!-- ToolbarComponent -->
 <g id="node11" class="node">
 <title>ToolbarComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1070.65,-122 945.35,-122 945.35,-86 1070.65,-86 1070.65,-122"/>
-<text text-anchor="middle" x="1008" y="-99.8" font-family="Times,serif" font-size="14.00">ToolbarComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1081.65,-122 956.35,-122 956.35,-86 1081.65,-86 1081.65,-122"/>
+<text text-anchor="middle" x="1019" y="-99.8" font-family="Times,serif" font-size="14.00">ToolbarComponent</text>
 </g>
 <!-- ToolbarComponent&#45;&gt;AppModule -->
 <g id="edge11" class="edge">
 <title>ToolbarComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M1008,-122.03C1008,-139.06 1008,-162 1008,-162 1008,-162 1368.23,-162 1368.23,-162"/>
-<polygon fill="black" stroke="black" points="1368.23,-165.5 1378.23,-162 1368.23,-158.5 1368.23,-165.5"/>
+<path fill="none" stroke="black" d="M1019,-122.03C1019,-139.06 1019,-162 1019,-162 1019,-162 1379.23,-162 1379.23,-162"/>
+<polygon fill="black" stroke="black" points="1379.23,-165.5 1389.23,-162 1379.23,-158.5 1379.23,-165.5"/>
 </g>
 <!-- TrabajoClaseComponent -->
 <g id="node12" class="node">
 <title>TrabajoClaseComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="926.97,-122 771.03,-122 771.03,-86 926.97,-86 926.97,-122"/>
-<text text-anchor="middle" x="849" y="-99.8" font-family="Times,serif" font-size="14.00">TrabajoClaseComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="937.97,-122 782.03,-122 782.03,-86 937.97,-86 937.97,-122"/>
+<text text-anchor="middle" x="860" y="-99.8" font-family="Times,serif" font-size="14.00">TrabajoClaseComponent</text>
 </g>
 <!-- TrabajoClaseComponent&#45;&gt;AppModule -->
 <g id="edge12" class="edge">
 <title>TrabajoClaseComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M849,-122.27C849,-140.56 849,-166 849,-166 849,-166 1368.01,-166 1368.01,-166"/>
-<polygon fill="black" stroke="black" points="1368.01,-169.5 1378.01,-166 1368.01,-162.5 1368.01,-169.5"/>
+<path fill="none" stroke="black" d="M860,-122.27C860,-140.56 860,-166 860,-166 860,-166 1379.01,-166 1379.01,-166"/>
+<polygon fill="black" stroke="black" points="1379.01,-169.5 1389.01,-166 1379.01,-162.5 1379.01,-169.5"/>
 </g>
 <!-- TrabajoClaseListaComponent -->
 <g id="node13" class="node">
 <title>TrabajoClaseListaComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="752.96,-122 569.04,-122 569.04,-86 752.96,-86 752.96,-122"/>
-<text text-anchor="middle" x="661" y="-99.8" font-family="Times,serif" font-size="14.00">TrabajoClaseListaComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="763.96,-122 580.04,-122 580.04,-86 763.96,-86 763.96,-122"/>
+<text text-anchor="middle" x="672" y="-99.8" font-family="Times,serif" font-size="14.00">TrabajoClaseListaComponent</text>
 </g>
 <!-- TrabajoClaseListaComponent&#45;&gt;AppModule -->
 <g id="edge13" class="edge">
 <title>TrabajoClaseListaComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M661,-122.11C661,-141.34 661,-169 661,-169 661,-169 1368.11,-169 1368.11,-169"/>
-<polygon fill="black" stroke="black" points="1368.11,-172.5 1378.11,-169 1368.11,-165.5 1368.11,-172.5"/>
+<path fill="none" stroke="black" d="M672,-122.11C672,-141.34 672,-169 672,-169 672,-169 1379.11,-169 1379.11,-169"/>
+<polygon fill="black" stroke="black" points="1379.11,-172.5 1389.11,-169 1379.11,-165.5 1379.11,-172.5"/>
 </g>
 <!-- TrabajoComponent -->
 <g id="node14" class="node">
 <title>TrabajoComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="551.37,-122 426.63,-122 426.63,-86 551.37,-86 551.37,-122"/>
-<text text-anchor="middle" x="489" y="-99.8" font-family="Times,serif" font-size="14.00">TrabajoComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="562.37,-122 437.63,-122 437.63,-86 562.37,-86 562.37,-122"/>
+<text text-anchor="middle" x="500" y="-99.8" font-family="Times,serif" font-size="14.00">TrabajoComponent</text>
 </g>
 <!-- TrabajoComponent&#45;&gt;AppModule -->
 <g id="edge14" class="edge">
 <title>TrabajoComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M489,-122.13C489,-142.57 489,-173 489,-173 489,-173 1368.19,-173 1368.19,-173"/>
-<polygon fill="black" stroke="black" points="1368.19,-176.5 1378.19,-173 1368.19,-169.5 1368.19,-176.5"/>
+<path fill="none" stroke="black" d="M500,-122.13C500,-142.57 500,-173 500,-173 500,-173 1379.19,-173 1379.19,-173"/>
+<polygon fill="black" stroke="black" points="1379.19,-176.5 1389.19,-173 1379.19,-169.5 1379.19,-176.5"/>
 </g>
 <!-- UserComponent -->
 <g id="node15" class="node">
 <title>UserComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="408.76,-122 301.24,-122 301.24,-86 408.76,-86 408.76,-122"/>
-<text text-anchor="middle" x="355" y="-99.8" font-family="Times,serif" font-size="14.00">UserComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="419.76,-122 312.24,-122 312.24,-86 419.76,-86 419.76,-122"/>
+<text text-anchor="middle" x="366" y="-99.8" font-family="Times,serif" font-size="14.00">UserComponent</text>
 </g>
 <!-- UserComponent&#45;&gt;AppModule -->
 <g id="edge15" class="edge">
 <title>UserComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M355,-122.04C355,-143.66 355,-177 355,-177 355,-177 1368.25,-177 1368.25,-177"/>
-<polygon fill="black" stroke="black" points="1368.25,-180.5 1378.25,-177 1368.25,-173.5 1368.25,-180.5"/>
+<path fill="none" stroke="black" d="M366,-122.04C366,-143.66 366,-177 366,-177 366,-177 1379.25,-177 1379.25,-177"/>
+<polygon fill="black" stroke="black" points="1379.25,-180.5 1389.25,-177 1379.25,-173.5 1379.25,-180.5"/>
 </g>
 <!-- AppComponent  -->
 <g id="node19" class="node">
 <title>AppComponent </title>
-<polygon fill="#80b1d3" stroke="black" points="1474.44,-252 1365.56,-252 1365.56,-216 1474.44,-216 1474.44,-252"/>
-<text text-anchor="middle" x="1420" y="-229.8" font-family="Times,serif" font-size="14.00">AppComponent </text>
+<polygon fill="#80b1d3" stroke="black" points="1485.44,-252 1376.56,-252 1376.56,-216 1485.44,-216 1485.44,-252"/>
+<text text-anchor="middle" x="1431" y="-229.8" font-family="Times,serif" font-size="14.00">AppComponent </text>
 </g>
 <!-- AppModule&#45;&gt;AppComponent  -->
 <g id="edge18" class="edge">
 <title>AppModule&#45;&gt;AppComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1420,-187.11C1420,-187.11 1420,-205.99 1420,-205.99"/>
-<polygon fill="black" stroke="black" points="1416.5,-205.99 1420,-215.99 1423.5,-205.99 1416.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M1431,-187.11C1431,-187.11 1431,-205.99 1431,-205.99"/>
+<polygon fill="black" stroke="black" points="1427.5,-205.99 1431,-215.99 1434.5,-205.99 1427.5,-205.99"/>
 </g>
 <!-- AppRoutingModule -->
 <g id="node17" class="node">
 <title>AppRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="277.27,-122 274.27,-126 253.27,-126 250.27,-122 148.73,-122 148.73,-86 277.27,-86 277.27,-122"/>
-<text text-anchor="middle" x="213" y="-99.8" font-family="Times,serif" font-size="14.00">AppRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="2769.27,-122 2766.27,-126 2745.27,-126 2742.27,-122 2640.73,-122 2640.73,-86 2769.27,-86 2769.27,-122"/>
+<text text-anchor="middle" x="2705" y="-99.8" font-family="Times,serif" font-size="14.00">AppRoutingModule</text>
 </g>
 <!-- AppRoutingModule&#45;&gt;AppModule -->
 <g id="edge16" class="edge">
 <title>AppRoutingModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M213,-122.01C213,-144.49 213,-180 213,-180 213,-180 1368.1,-180 1368.1,-180"/>
-<polygon fill="black" stroke="black" points="1368.1,-183.5 1378.1,-180 1368.1,-176.5 1368.1,-183.5"/>
+<path fill="none" stroke="black" d="M2705,-122.15C2705,-145.76 2705,-184 2705,-184 2705,-184 1482.66,-184 1482.66,-184"/>
+<polygon fill="black" stroke="black" points="1482.66,-180.5 1472.66,-184 1482.66,-187.5 1482.66,-180.5"/>
 </g>
 <!-- MaterialModule -->
 <g id="node18" class="node">
 <title>MaterialModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="130.47,-122 127.47,-126 106.47,-126 103.47,-122 23.53,-122 23.53,-86 130.47,-86 130.47,-122"/>
-<text text-anchor="middle" x="77" y="-99.8" font-family="Times,serif" font-size="14.00">MaterialModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="2622.47,-122 2619.47,-126 2598.47,-126 2595.47,-122 2515.53,-122 2515.53,-86 2622.47,-86 2622.47,-122"/>
+<text text-anchor="middle" x="2569" y="-99.8" font-family="Times,serif" font-size="14.00">MaterialModule</text>
 </g>
 <!-- MaterialModule&#45;&gt;AppModule -->
 <g id="edge17" class="edge">
 <title>MaterialModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M77,-122.15C77,-145.76 77,-184 77,-184 77,-184 1368.33,-184 1368.33,-184"/>
-<polygon fill="black" stroke="black" points="1368.33,-187.5 1378.33,-184 1368.33,-180.5 1368.33,-187.5"/>
+<path fill="none" stroke="black" d="M2569,-122.01C2569,-144.49 2569,-180 2569,-180 2569,-180 1482.85,-180 1482.85,-180"/>
+<polygon fill="black" stroke="black" points="1482.85,-176.5 1472.85,-180 1482.85,-183.5 1482.85,-176.5"/>
 </g>
 <!-- AuthService -->
 <g id="node20" class="node">
 <title>AuthService</title>
-<ellipse fill="#fdb462" stroke="black" cx="2710" cy="-104" rx="59.11" ry="18"/>
-<text text-anchor="middle" x="2710" y="-99.8" font-family="Times,serif" font-size="14.00">AuthService</text>
+<ellipse fill="#fdb462" stroke="black" cx="229" cy="-104" rx="59.11" ry="18"/>
+<text text-anchor="middle" x="229" y="-99.8" font-family="Times,serif" font-size="14.00">AuthService</text>
 </g>
 <!-- AuthService&#45;&gt;AppModule -->
 <g id="edge19" class="edge">
 <title>AuthService&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M2710,-122.15C2710,-145.76 2710,-184 2710,-184 2710,-184 1471.82,-184 1471.82,-184"/>
-<polygon fill="black" stroke="black" points="1471.82,-180.5 1461.82,-184 1471.82,-187.5 1471.82,-180.5"/>
+<path fill="none" stroke="black" d="M229,-122.01C229,-144.49 229,-180 229,-180 229,-180 1379.28,-180 1379.28,-180"/>
+<polygon fill="black" stroke="black" points="1379.28,-183.5 1389.28,-180 1379.28,-176.5 1379.28,-183.5"/>
 </g>
 <!-- SnackService -->
 <g id="node21" class="node">
 <title>SnackService</title>
-<ellipse fill="#fdb462" stroke="black" cx="2569" cy="-104" rx="63.68" ry="18"/>
-<text text-anchor="middle" x="2569" y="-99.8" font-family="Times,serif" font-size="14.00">SnackService</text>
+<ellipse fill="#fdb462" stroke="black" cx="88" cy="-104" rx="63.68" ry="18"/>
+<text text-anchor="middle" x="88" y="-99.8" font-family="Times,serif" font-size="14.00">SnackService</text>
 </g>
 <!-- SnackService&#45;&gt;AppModule -->
 <g id="edge20" class="edge">
 <title>SnackService&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M2569,-122.01C2569,-144.49 2569,-180 2569,-180 2569,-180 1471.91,-180 1471.91,-180"/>
-<polygon fill="black" stroke="black" points="1471.91,-176.5 1461.91,-180 1471.91,-183.5 1471.91,-176.5"/>
+<path fill="none" stroke="black" d="M88,-122.15C88,-145.76 88,-184 88,-184 88,-184 1379.33,-184 1379.33,-184"/>
+<polygon fill="black" stroke="black" points="1379.33,-187.5 1389.33,-184 1379.33,-180.5 1379.33,-187.5"/>
 </g>
 </g>
 </svg>

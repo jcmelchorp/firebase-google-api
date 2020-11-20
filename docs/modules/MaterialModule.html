@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -34,7 +34,7 @@
 
 
 <ol class="breadcrumb">
-    <li>Modules</li>
+    <li>Módulos</li>
     <li>MaterialModule</li>
 </ol>
 
@@ -43,16 +43,13 @@
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
 
         <p class="comment">
-            <h3>File</h3>
+            <h3>Fichero</h3>
         </p>
         <p class="comment">
             <code>src/app/material-design/material.module.ts</code>
@@ -70,149 +67,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { LayoutModule } from &#x27;@angular/cdk/layout&#x27;;
-import { A11yModule } from &#x27;@angular/cdk/a11y&#x27;;
-import { DragDropModule } from &#x27;@angular/cdk/drag-drop&#x27;;
-import { PortalModule } from &#x27;@angular/cdk/portal&#x27;;
-import { ScrollingModule } from &#x27;@angular/cdk/scrolling&#x27;;
-import { CdkStepperModule } from &#x27;@angular/cdk/stepper&#x27;;
-import { CdkTableModule } from &#x27;@angular/cdk/table&#x27;;
-import { CdkTreeModule } from &#x27;@angular/cdk/tree&#x27;;
-import { MatAutocompleteModule } from &#x27;@angular/material/autocomplete&#x27;;
-import { MatBadgeModule } from &#x27;@angular/material/badge&#x27;;
-import { MatBottomSheetModule } from &#x27;@angular/material/bottom-sheet&#x27;;
-import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
-import { MatButtonToggleModule } from &#x27;@angular/material/button-toggle&#x27;;
-import { MatCardModule } from &#x27;@angular/material/card&#x27;;
-import { MatCheckboxModule } from &#x27;@angular/material/checkbox&#x27;;
-import { MatChipsModule } from &#x27;@angular/material/chips&#x27;;
-import { MatNativeDateModule, MatRippleModule } from &#x27;@angular/material/core&#x27;;
-import { MatDatepickerModule } from &#x27;@angular/material/datepicker&#x27;;
-import { MatDialogModule } from &#x27;@angular/material/dialog&#x27;;
-import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
-import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
-import { MatGridListModule } from &#x27;@angular/material/grid-list&#x27;;
-import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
-import { MatInputModule } from &#x27;@angular/material/input&#x27;;
-import { MatListModule } from &#x27;@angular/material/list&#x27;;
-import { MatMenuModule } from &#x27;@angular/material/menu&#x27;;
-import { MatPaginatorModule } from &#x27;@angular/material/paginator&#x27;;
-import { MatProgressBarModule } from &#x27;@angular/material/progress-bar&#x27;;
-import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
-import { MatRadioModule } from &#x27;@angular/material/radio&#x27;;
-import { MatSelectModule } from &#x27;@angular/material/select&#x27;;
-import { MatSidenavModule } from &#x27;@angular/material/sidenav&#x27;;
-import { MatSlideToggleModule } from &#x27;@angular/material/slide-toggle&#x27;;
-import { MatSliderModule } from &#x27;@angular/material/slider&#x27;;
-import { MatSnackBarModule } from &#x27;@angular/material/snack-bar&#x27;;
-import { MatSortModule } from &#x27;@angular/material/sort&#x27;;
-import { MatStepperModule } from &#x27;@angular/material/stepper&#x27;;
-import { MatTableModule } from &#x27;@angular/material/table&#x27;;
-import { MatTabsModule } from &#x27;@angular/material/tabs&#x27;;
-import { MatToolbarModule } from &#x27;@angular/material/toolbar&#x27;;
-import { MatTooltipModule } from &#x27;@angular/material/tooltip&#x27;;
-import { MatTreeModule } from &#x27;@angular/material/tree&#x27;;
-import { MatFormFieldModule } from &#x27;@angular/material/form-field&#x27;;
-
-@NgModule({
-  exports: [
-    A11yModule,
-    DragDropModule,
-    LayoutModule,
-    PortalModule,
-    ScrollingModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
-  ],
-  imports: [
-    A11yModule,
-    DragDropModule,
-    LayoutModule,
-    PortalModule,
-    ScrollingModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatFormFieldModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
-  ],
-})
-export class MaterialModule { }
-</code></pre>
-    </div>
 </div>
 
 
@@ -235,7 +89,7 @@ export class MaterialModule { }
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

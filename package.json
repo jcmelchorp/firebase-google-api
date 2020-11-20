@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "doc:g": "npx @compodoc/compodoc -p ./tsconfig.json --output ./docs --name \"Firebase Google API\" --theme material"
+    "doc:g": "npx @compodoc/compodoc -p ./tsconfig.json --output ./docs --name \"Firebase Google API\" --customFavicon ./src/favicon.ico --customLogo ./src/assets/images/rds-nobackground.png --disableDependencies --theme material --disableSourceCode --hideGenerator --language es-ES"
   },
   "private": true,
   "dependencies": {
