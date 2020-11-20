@@ -1,3 +1,4 @@
+/** A Course in Classroom. */
 export interface Course {
   id: string;
   name: string;
@@ -23,6 +24,9 @@ export interface Date {
   month: number;
   day: number;
 }
+/**
+ * Course work created by a teacher for students of the course.
+ */
 export interface CourseWork {
   description: string;
   id: string;
@@ -38,9 +42,9 @@ export interface CourseWork {
   individualStudentsOptions: IndividualStudentsOptions;
   submissionModificationMode: SubmissionModificationMode;
   creationTime: string;
-  workType: WorkType;
+  workType: CourseWorkType;
   assignment: Assigment;
-  state: string;
+  state: State;
   maxPoints: number;
   topicId: string;
   associatedWithDeveloper: boolean;
@@ -55,7 +59,29 @@ export interface Material {
 export interface Assigment {
   studentWorkFolder: DriveFolder;
 }
-export enum WorkType {
+
+export enum State {
+  COURSE_WORK_STATE_UNSPECIFIED,
+  PUBLISHED,
+  DRAFT,
+  DELETED
+}
+/** State of the course. If unspecified, the default state is `PROVISIONED`. */
+export enum CourseState {
+  COURSE_STATE_UNSPECIFIED,
+  ACTIVE,
+  ARCHIVED,
+  PROVISIONED,
+  DECLINED,
+  SUSPENDED,
+}
+export enum SharedMode {
+  UNKNOWN_SHARE_MODE,
+  VIEW,
+  EDIT,
+  STUDENT_COPY
+}
+export enum CourseWorkType {
   COURSE_WORK_TYPE_UNSPECIFIED,
   ASSIGNMENT,
   SHORT_ANSWER_QUESTION,
@@ -71,10 +97,33 @@ export enum SubmissionModificationMode {
   MODIFIABLE_UNTIL_TURNED_IN,
   MODIFIABLE
 }
+export enum SubmissionState {
+  NEW, CREATED, TURNED_IN, RETURNED, RECLAIMED_BY_STUDEN
+
+}
 export interface IndividualStudentsOptions {
   studentIds: string[];
 
 }
+
+export interface StudentSubmission {
+  courseId: string;
+  courseWorkId: string;
+  id: string;
+  userId: string;
+  creationTime: string;
+  updateTime: string;
+  state: SubmissionState;
+  late: boolean;
+  draftGrade: number;
+  assignedGrade: number;
+  alternateLink: string;
+  courseWorkType: CourseWorkType;
+  associatedWithDeveloper: boolean;
+  //submissionHistory: SubmissionHistory[];
+}
+
+
 export interface Teachers {
   courseId: string;
   userId: string;
@@ -110,20 +159,6 @@ export interface Name {
   fullName: string;
 }
 
-export enum CourseState {
-  COURSE_STATE_UNSPECIFIED,
-  ACTIVE,
-  ARCHIVED,
-  PROVISIONED,
-  DECLINED,
-  SUSPENDED,
-}
-export enum SharedMode {
-  UNKNOWN_SHARE_MODE,
-  VIEW,
-  EDIT,
-  STUDENT_COPY
-}
 export interface SharedDriveFile {
   driveFile: DriveFile;
   shareMode: SharedMode;

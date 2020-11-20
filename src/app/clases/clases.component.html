@@ -1,11 +1,14 @@
 <div class="pt-3">
-  <div *ngIf="!coursesInfo" fxLayout="column" fxLayoutAlign="center center">
+  <div *ngIf="!(coursesInfo)" fxLayout="column" fxLayoutAlign="center center">
     <mat-spinner strokeWidth="3" [diameter]="50">
     </mat-spinner>
     <span>Buscando trabajo de clase...</span><br>
   </div>
+  <!--   <input type="text" [formControl]="filter" placeholder="Buscar curso por nombre...">-->
   <div *ngIf="(coursesInfo) as courses" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">
     <!-- <app-cursos-alumno [coursesInfo]="courses"></app-cursos-alumno> -->
+    <!--  <mat-card *ngFor="let course of courseInfo as courseInfo" class="mb-3 simple-card" fxFlex="0 1 calc(33.3% - 10px)"
+      fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%" [ngStyle]="{'height': '200px', 'width': 'auto' }"> -->
     <mat-card *ngFor="let course of coursesInfo" class="mb-3 simple-card" fxFlex="0 1 calc(33.3% - 10px)"
       fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%" [ngStyle]="{'height': '200px', 'width': 'auto' }">
       <!-- [routerLink]="[item.route_link] -->
@@ -17,29 +20,24 @@
             matTooltip="{{(course.state=='ACTIVE') ? 'Curso Activo' : course.state}}" matTooltipPosition="above">
           </fa-icon>
           {{course.name}} ({{course.section}})
-          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+          <!-- Mat-Menu  ----------------------->
+          <button mat-icon-button class="position-absolute" [ngStyle]="{'top':'5px','right':'5px'}"
+            [matMenuTriggerFor]="menu" aria-label="Toggle menu">
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu" xPosition="before">
+            <div mat-menu-item class="text-primary">ID: {{course.id}}</div>
+            <a mat-menu-item [routerLink]="['trabajo',course.id]">Trabajo de clase</a>
             <a mat-menu-item href="{{course.alternateLink}}" target="_blank">Ir al curso</a>
           </mat-menu>
+          <!-- --------------------------------->
         </mat-card-title>
         <mat-card-subtitle>
           {{course.ownGivenName + ' ' + course.ownFamilyName}}
         </mat-card-subtitle>
       </mat-card-header>
+
       <mat-card-content>
-        <div fxLayout="row wrap" fxLayoutAlign="space-between top">
-          <div class="text-primary">ID: {{course.id}}</div>
-          <div>
-            <fa-icon class="px-1" [ngClass]="(course.guardiansEnabled) ? 'text-success' : 'text-danger'"
-              [icon]="(course.guardiansEnabled) ? faChalkboardTeacher : faChalkboardTeacher"
-              matTooltip="{{(course.state=='ACTIVE') ? 'Informe a tutores Activado' : 'Informe a tutores Desactivado'}}"
-              matTooltipPosition="above">
-            </fa-icon>
-          </div>
-        </div>
-        <a mat-button [routerLink]="['trabajo',course.id]">Trabajo</a>
         {{course.descHeading}}
         {{course.desc}}
         <!-- <p>
@@ -47,6 +45,13 @@
                 Última modificacion: {{course.updateTime|date:'medium'}}<br>
               </p> -->
       </mat-card-content>
+      <mat-card-actions>
+        <fa-icon class="px-1" [ngClass]="(course.guardiansEnabled) ? 'text-success' : 'text-danger'"
+          [icon]="(course.guardiansEnabled) ? faChalkboardTeacher : faChalkboardTeacher"
+          matTooltip="{{(course.state=='ACTIVE') ? 'Informe a tutores Activado' : 'Informe a tutores Desactivado'}}"
+          matTooltipPosition="above">
+        </fa-icon>
+      </mat-card-actions>
     </mat-card>
   </div>
 

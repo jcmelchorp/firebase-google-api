@@ -35,6 +35,11 @@ export class TrabajoClaseComponent implements OnInit {
   ngOnInit() {
     this.user$.subscribe(user => {
       return this.userId = user.providerData[0].uid;
-    })
+    }).unsubscribe();
+  }
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+
   }
 }

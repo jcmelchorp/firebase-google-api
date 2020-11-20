@@ -7,7 +7,7 @@
     </div>
     <div *ngIf="courseWork">
       <button mat-icon-button [routerLink]="['/user',userId]">
-        <fa-icon [icon]="faChevronLeft"></fa-icon>&nbsp;Volver
+        <fa-icon [icon]="faChevronLeft"></fa-icon>&nbsp; Volver
       </button>
       <div *ngIf="courseWork.length==0" fxLayout="row flex" fxLayoutAlign="center center">
         No se encontró trabajo de clase

@@ -7,7 +7,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ShellComponent } from './shell/shell.component';
 import { TrabajoClaseComponent } from './trabajo-clase/trabajo-clase.component';
-import { TrabajoComponent } from './trabajo/trabajo.component';
 
 const routes: Routes = [{
   path: '', component: ShellComponent, children: [
@@ -24,10 +23,11 @@ const routes: Routes = [{
     },
 
   ]
-}];
+},
+{ path: 'firebase', loadChildren: () => import('./firebase-db/firebase-db.module').then(m => m.FirebaseDbModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

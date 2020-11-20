@@ -1,0 +1,456 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Firebase Google API</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Firebase Google API</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>Teachers</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/classroom.model.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#courseId">courseId</a>
+                                </li>
+                                <li>
+                                        <a href="#profile">profile</a>
+                                </li>
+                                <li>
+                                        <a href="#userId">userId</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="courseId"></a>
+                                        <span class="name"><b>courseId</b><a href="#courseId"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>courseId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="profile"></a>
+                                        <span class="name"><b>profile</b><a href="#profile"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>profile:         <code><a href="../interfaces/UserProfile.html" target="_self" >UserProfile</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/UserProfile.html" target="_self" >UserProfile</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="userId"></a>
+                                        <span class="name"><b>userId</b><a href="#userId"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>userId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface Course {
+  id: string;
+  name: string;
+  section: string;
+  descriptionHeading: string;
+  description: string;
+  room: string;
+  ownerId: string;
+  creationTime: string;
+  updateTime: string;
+  enrollmentCode: string;
+  courseState: CourseState;
+  alternateLink: string;
+  teacherGroupEmail: string;
+  courseGroupEmail: string;
+  guardiansEnabled: boolean;
+  calendarId: string;
+  teacherFolder: DriveFolder;
+  courseMaterialSets: CourseMaterialSet[];
+}
+export interface Date {
+  year: number;
+  month: number;
+  day: number;
+}
+/**
+ * Course work created by a teacher for students of the course.
+ */
+export interface CourseWork {
+  description: string;
+  id: string;
+  courseId: string;
+  dueDate: Date;
+  updateTime: string;
+  scheduledTime: string;
+  title: string;
+  materials: Material[];
+  creatorUserId: string;
+  dueTime?: string;
+  alternateLink: string;
+  individualStudentsOptions: IndividualStudentsOptions;
+  submissionModificationMode: SubmissionModificationMode;
+  creationTime: string;
+  workType: CourseWorkType;
+  assignment: Assigment;
+  state: State;
+  maxPoints: number;
+  topicId: string;
+  associatedWithDeveloper: boolean;
+}
+
+export interface Material {
+  form: Form;
+  youtubeVideo: YouTubeVideo;
+  link: Link;
+  driveFile: SharedDriveFile;
+}
+export interface Assigment {
+  studentWorkFolder: DriveFolder;
+}
+
+export enum State {
+  COURSE_WORK_STATE_UNSPECIFIED,
+  PUBLISHED,
+  DRAFT,
+  DELETED
+}
+/** State of the course. If unspecified, the default state is &#x60;PROVISIONED&#x60;. */
+export enum CourseState {
+  COURSE_STATE_UNSPECIFIED,
+  ACTIVE,
+  ARCHIVED,
+  PROVISIONED,
+  DECLINED,
+  SUSPENDED,
+}
+export enum SharedMode {
+  UNKNOWN_SHARE_MODE,
+  VIEW,
+  EDIT,
+  STUDENT_COPY
+}
+export enum CourseWorkType {
+  COURSE_WORK_TYPE_UNSPECIFIED,
+  ASSIGNMENT,
+  SHORT_ANSWER_QUESTION,
+  MULTIPLE_CHOICE_QUESTION
+}
+export enum AssigneeMode {
+  ASSIGNEE_MODE_UNSPECIFIED,
+  ALL_STUDENTS,
+  INDIVIDUAL_STUDENTS
+}
+export enum SubmissionModificationMode {
+  SUBMISSION_MODIFICATION_MODE_UNSPECIFIED,
+  MODIFIABLE_UNTIL_TURNED_IN,
+  MODIFIABLE
+}
+export enum SubmissionState {
+  NEW, CREATED, TURNED_IN, RETURNED, RECLAIMED_BY_STUDEN
+
+}
+export interface IndividualStudentsOptions {
+  studentIds: string[];
+
+}
+
+export interface StudentSubmission {
+  courseId: string;
+  courseWorkId: string;
+  id: string;
+  userId: string;
+  creationTime: string;
+  updateTime: string;
+  state: SubmissionState;
+  late: boolean;
+  draftGrade: number;
+  assignedGrade: number;
+  alternateLink: string;
+  courseWorkType: CourseWorkType;
+  associatedWithDeveloper: boolean;
+  //submissionHistory: SubmissionHistory[];
+}
+
+
+export interface Teachers {
+  courseId: string;
+  userId: string;
+  profile: UserProfile;
+}
+export interface Students {
+  courseId: string;
+  userId: string;
+  profile: UserProfile;
+  studentWorkFolder: DriveFolder;
+
+}
+
+export interface UserProfile {
+  id: string;
+  name: Name;
+  emailAddress: string;
+  photoUrl: string;
+  permissions: GlobalPermissions;
+  verifiedTeacher: boolean;
+}
+export interface GlobalPermissions {
+  permission: Permission;
+}
+
+export enum Permission {
+  PERMISSION_UNSPECIFIED, CREATE_COURSE
+}
+
+export interface Name {
+  givenName: string;
+  familyName: string;
+  fullName: string;
+}
+
+export interface SharedDriveFile {
+  driveFile: DriveFile;
+  shareMode: SharedMode;
+
+}
+export interface DriveFolder {
+  id: string;
+  title: string;
+  alternateLink: string;
+}
+export interface CourseMaterialSet {
+  title: string;
+  materials: CourseMaterial[];
+}
+export interface CourseMaterial {
+  driveFile: DriveFile;
+  youTubeVideo: YouTubeVideo;
+  link: Link;
+  form: Form;
+}
+export interface YouTubeVideo {
+  id: string;
+  title: string;
+  alternateLink: string;
+  thumbnailUrl: string;
+}
+export interface DriveFile {
+  id: string;
+  title: string;
+  alternateLink: string;
+  thumbnailUrl: string;
+}
+export interface Link {
+  url: string;
+  title: string;
+  thumbnailUrl: string;
+}
+export interface Form {
+  formUrl: string;
+  responseUrl: string;
+  title: string;
+  thumbnailUrl: string;
+}
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'Teachers.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

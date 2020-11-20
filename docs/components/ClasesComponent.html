@@ -1,0 +1,909 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Firebase Google API</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Firebase Google API</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ClasesComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/clases/clases.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-clases</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./clases.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./clases.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#courseId">courseId</a>
+                            </li>
+                            <li>
+                                <a href="#coursesInfo">coursesInfo</a>
+                            </li>
+                            <li>
+                                <a href="#coursesInfo$">coursesInfo$</a>
+                            </li>
+                            <li>
+                                <a href="#courseWork">courseWork</a>
+                            </li>
+                            <li>
+                                <a href="#faChalkboardTeacher">faChalkboardTeacher</a>
+                            </li>
+                            <li>
+                                <a href="#faCheckCircle">faCheckCircle</a>
+                            </li>
+                            <li>
+                                <a href="#faTimesCircle">faTimesCircle</a>
+                            </li>
+                            <li>
+                                <a href="#faUserGraduate">faUserGraduate</a>
+                            </li>
+                            <li>
+                                <a href="#filter">filter</a>
+                            </li>
+                            <li>
+                                <a href="#filter$">filter$</a>
+                            </li>
+                            <li>
+                                <a href="#filteredCourses$">filteredCourses$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#route">route</a>
+                            </li>
+                            <li>
+                                <a href="#user$">user$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(snack: <a href="../injectables/SnackService.html">SnackService</a>, route?: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, authService?: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/clases/clases.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>snack</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SnackService.html" target="_self" >SnackService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/clases/clases.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courseId"></a>
+                        <span class="name">
+                            <b>
+                            courseId</b>
+                            <a href="#courseId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/clases/clases.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="coursesInfo"></a>
+                        <span class="name">
+                            <b>
+                            coursesInfo</b>
+                            <a href="#coursesInfo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/clases/clases.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="coursesInfo$"></a>
+                        <span class="name">
+                            <b>
+                            coursesInfo$</b>
+                            <a href="#coursesInfo$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/clases/clases.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courseWork"></a>
+                        <span class="name">
+                            <b>
+                            courseWork</b>
+                            <a href="#courseWork"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>CourseWork[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/clases/clases.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faChalkboardTeacher"></a>
+                        <span class="name">
+                            <b>
+                            faChalkboardTeacher</b>
+                            <a href="#faChalkboardTeacher"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faChalkboardTeacher</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/clases/clases.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faCheckCircle"></a>
+                        <span class="name">
+                            <b>
+                            faCheckCircle</b>
+                            <a href="#faCheckCircle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faCheckCircle</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/clases/clases.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faTimesCircle"></a>
+                        <span class="name">
+                            <b>
+                            faTimesCircle</b>
+                            <a href="#faTimesCircle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faTimesCircle</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/clases/clases.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faUserGraduate"></a>
+                        <span class="name">
+                            <b>
+                            faUserGraduate</b>
+                            <a href="#faUserGraduate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faUserGraduate</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/clases/clases.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filter"></a>
+                        <span class="name">
+                            <b>
+                            filter</b>
+                            <a href="#filter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormControl</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/clases/clases.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filter$"></a>
+                        <span class="name">
+                            <b>
+                            filter$</b>
+                            <a href="#filter$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;string&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/clases/clases.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredCourses$"></a>
+                        <span class="name">
+                            <b>
+                            filteredCourses$</b>
+                            <a href="#filteredCourses$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;any[]&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/clases/clases.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="route"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Optional</span>
+                            route</b>
+                            <a href="#route"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/clases/clases.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user$"></a>
+                        <span class="name">
+                            <b>
+                            user$</b>
+                            <a href="#user$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;firebase.User&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/clases/clases.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { FormControl } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+
+import { faCheckCircle, faTimesCircle } from &#x27;@fortawesome/free-regular-svg-icons&#x27;;
+import { faChalkboardTeacher, faUserGraduate } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+
+import firebase from &#x27;firebase/app&#x27;;
+import &#x27;firebase/auth&#x27;;
+
+import { combineLatest, from, Observable } from &#x27;rxjs&#x27;;
+import { map, startWith } from &#x27;rxjs/operators&#x27;;
+
+import { AuthService } from &#x27;../auth.service&#x27;;
+import { CourseWork } from &#x27;../classroom.model&#x27;;
+import { SnackService } from &#x27;./../snack.service&#x27;;
+
+@Component({
+  selector: &#x27;app-clases&#x27;,
+  templateUrl: &#x27;./clases.component.html&#x27;,
+  styleUrls: [&#x27;./clases.component.scss&#x27;]
+})
+export class ClasesComponent implements OnInit {
+  user$: Observable&lt;firebase.User&gt;;
+  faChalkboardTeacher &#x3D; faChalkboardTeacher;
+  faCheckCircle &#x3D; faCheckCircle;
+  faUserGraduate &#x3D; faUserGraduate;
+  faTimesCircle &#x3D; faTimesCircle;
+  courseId: string;
+  courseWork: CourseWork[];
+  coursesInfo: any[];
+  filter: FormControl;
+  filter$: Observable&lt;string&gt;;
+  coursesInfo$: Observable&lt;any[]&gt;;
+  filteredCourses$: Observable&lt;any[]&gt;;
+
+  constructor(
+    private snack: SnackService,
+    public route?: ActivatedRoute,
+    private authService?: AuthService,
+  ) {
+    this.user$ &#x3D; this.authService.user$;
+    /* this.coursesInfo$ &#x3D; this.authService.coursesInfo$;
+    this.filter &#x3D; new FormControl(&#x27;&#x27;);
+    this.filter$ &#x3D; this.filter.valueChanges.pipe(startWith(&#x27;&#x27;));
+    this.filteredCourses$ &#x3D; combineLatest(this.coursesInfo$, this.filter$).pipe(
+      map(([states, filterString]) &#x3D;&gt; states.filter(state &#x3D;&gt; state.name.toLowerCase().indexOf(filterString.toLowerCase()) !&#x3D;&#x3D; -1))
+    ); */
+  }
+
+  ngOnInit(): void {
+    if (this.authService.user$) {
+      this.authService.getCoursesInfo(this.route.snapshot.params.id).then(res &#x3D;&gt; {
+        return this.coursesInfo &#x3D; res;
+      });
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;pt-3&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;!(coursesInfo)&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+    &lt;mat-spinner strokeWidth&#x3D;&quot;3&quot; [diameter]&#x3D;&quot;50&quot;&gt;
+    &lt;/mat-spinner&gt;
+    &lt;span&gt;Buscando trabajo de clase...&lt;/span&gt;&lt;br&gt;
+  &lt;/div&gt;
+  &lt;!--   &lt;input type&#x3D;&quot;text&quot; [formControl]&#x3D;&quot;filter&quot; placeholder&#x3D;&quot;Buscar curso por nombre...&quot;&gt;--&gt;
+  &lt;div *ngIf&#x3D;&quot;(coursesInfo) as courses&quot; fxLayout&#x3D;&quot;row wrap&quot; fxLayout.lt-sm&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;space-between&quot;&gt;
+    &lt;!-- &lt;app-cursos-alumno [coursesInfo]&#x3D;&quot;courses&quot;&gt;&lt;/app-cursos-alumno&gt; --&gt;
+    &lt;!--  &lt;mat-card *ngFor&#x3D;&quot;let course of courseInfo as courseInfo&quot; class&#x3D;&quot;mb-3 simple-card&quot; fxFlex&#x3D;&quot;0 1 calc(33.3% - 10px)&quot;
+      fxFlex.lt-md&#x3D;&quot;0 1 calc(50% - 10px)&quot; fxFlex.lt-sm&#x3D;&quot;100%&quot; [ngStyle]&#x3D;&quot;{&#x27;height&#x27;: &#x27;200px&#x27;, &#x27;width&#x27;: &#x27;auto&#x27; }&quot;&gt; --&gt;
+    &lt;mat-card *ngFor&#x3D;&quot;let course of coursesInfo&quot; class&#x3D;&quot;mb-3 simple-card&quot; fxFlex&#x3D;&quot;0 1 calc(33.3% - 10px)&quot;
+      fxFlex.lt-md&#x3D;&quot;0 1 calc(50% - 10px)&quot; fxFlex.lt-sm&#x3D;&quot;100%&quot; [ngStyle]&#x3D;&quot;{&#x27;height&#x27;: &#x27;200px&#x27;, &#x27;width&#x27;: &#x27;auto&#x27; }&quot;&gt;
+      &lt;!-- [routerLink]&#x3D;&quot;[item.route_link] --&gt;
+      &lt;mat-card-header&gt;
+        &lt;img mat-card-avatar src&#x3D;&quot;{{course.ownPhoto}}&quot;&gt;
+        &lt;mat-card-title&gt;
+          &lt;fa-icon class&#x3D;&quot;px-1&quot; [ngClass]&#x3D;&quot;(course.state&#x3D;&#x3D;&#x27;ACTIVE&#x27;) ? &#x27;text-success&#x27; : &#x27;text-danger&#x27;&quot;
+            [icon]&#x3D;&quot;(course.state&#x3D;&#x3D;&#x27;ACTIVE&#x27;) ? faCheckCircle : faTimesCircle&quot;
+            matTooltip&#x3D;&quot;{{(course.state&#x3D;&#x3D;&#x27;ACTIVE&#x27;) ? &#x27;Curso Activo&#x27; : course.state}}&quot; matTooltipPosition&#x3D;&quot;above&quot;&gt;
+          &lt;/fa-icon&gt;
+          {{course.name}} ({{course.section}})
+          &lt;!-- Mat-Menu  -----------------------&gt;
+          &lt;button mat-icon-button class&#x3D;&quot;position-absolute&quot; [ngStyle]&#x3D;&quot;{&#x27;top&#x27;:&#x27;5px&#x27;,&#x27;right&#x27;:&#x27;5px&#x27;}&quot;
+            [matMenuTriggerFor]&#x3D;&quot;menu&quot; aria-label&#x3D;&quot;Toggle menu&quot;&gt;
+            &lt;mat-icon&gt;more_vert&lt;/mat-icon&gt;
+          &lt;/button&gt;
+          &lt;mat-menu #menu&#x3D;&quot;matMenu&quot; xPosition&#x3D;&quot;before&quot;&gt;
+            &lt;div mat-menu-item class&#x3D;&quot;text-primary&quot;&gt;ID: {{course.id}}&lt;/div&gt;
+            &lt;a mat-menu-item [routerLink]&#x3D;&quot;[&#x27;trabajo&#x27;,course.id]&quot;&gt;Trabajo de clase&lt;/a&gt;
+            &lt;a mat-menu-item href&#x3D;&quot;{{course.alternateLink}}&quot; target&#x3D;&quot;_blank&quot;&gt;Ir al curso&lt;/a&gt;
+          &lt;/mat-menu&gt;
+          &lt;!-- ---------------------------------&gt;
+        &lt;/mat-card-title&gt;
+        &lt;mat-card-subtitle&gt;
+          {{course.ownGivenName + &#x27; &#x27; + course.ownFamilyName}}
+        &lt;/mat-card-subtitle&gt;
+      &lt;/mat-card-header&gt;
+
+      &lt;mat-card-content&gt;
+        {{course.descHeading}}
+        {{course.desc}}
+        &lt;!-- &lt;p&gt;
+                Fecha de Creación: {{course.creationTime|date:&#x27;medium&#x27;}}&lt;br&gt;
+                Última modificacion: {{course.updateTime|date:&#x27;medium&#x27;}}&lt;br&gt;
+              &lt;/p&gt; --&gt;
+      &lt;/mat-card-content&gt;
+      &lt;mat-card-actions&gt;
+        &lt;fa-icon class&#x3D;&quot;px-1&quot; [ngClass]&#x3D;&quot;(course.guardiansEnabled) ? &#x27;text-success&#x27; : &#x27;text-danger&#x27;&quot;
+          [icon]&#x3D;&quot;(course.guardiansEnabled) ? faChalkboardTeacher : faChalkboardTeacher&quot;
+          matTooltip&#x3D;&quot;{{(course.state&#x3D;&#x3D;&#x27;ACTIVE&#x27;) ? &#x27;Informe a tutores Activado&#x27; : &#x27;Informe a tutores Desactivado&#x27;}}&quot;
+          matTooltipPosition&#x3D;&quot;above&quot;&gt;
+        &lt;/fa-icon&gt;
+      &lt;/mat-card-actions&gt;
+    &lt;/mat-card&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./clases.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="pt-3">  <div *ngIf="!(coursesInfo)" fxLayout="column" fxLayoutAlign="center center">    <mat-spinner strokeWidth="3" [diameter]="50">    </mat-spinner>    <span>Buscando trabajo de clase...</span><br>  </div>  <!--   <input type="text" [formControl]="filter" placeholder="Buscar curso por nombre...">-->  <div *ngIf="(coursesInfo) as courses" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between">    <!-- <app-cursos-alumno [coursesInfo]="courses"></app-cursos-alumno> -->    <!--  <mat-card *ngFor="let course of courseInfo as courseInfo" class="mb-3 simple-card" fxFlex="0 1 calc(33.3% - 10px)"      fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%" [ngStyle]="{\'height\': \'200px\', \'width\': \'auto\' }"> -->    <mat-card *ngFor="let course of coursesInfo" class="mb-3 simple-card" fxFlex="0 1 calc(33.3% - 10px)"      fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%" [ngStyle]="{\'height\': \'200px\', \'width\': \'auto\' }">      <!-- [routerLink]="[item.route_link] -->      <mat-card-header>        <img mat-card-avatar src="{{course.ownPhoto}}">        <mat-card-title>          <fa-icon class="px-1" [ngClass]="(course.state==\'ACTIVE\') ? \'text-success\' : \'text-danger\'"            [icon]="(course.state==\'ACTIVE\') ? faCheckCircle : faTimesCircle"            matTooltip="{{(course.state==\'ACTIVE\') ? \'Curso Activo\' : course.state}}" matTooltipPosition="above">          </fa-icon>          {{course.name}} ({{course.section}})          <!-- Mat-Menu  ----------------------->          <button mat-icon-button class="position-absolute" [ngStyle]="{\'top\':\'5px\',\'right\':\'5px\'}"            [matMenuTriggerFor]="menu" aria-label="Toggle menu">            <mat-icon>more_vert</mat-icon>          </button>          <mat-menu #menu="matMenu" xPosition="before">            <div mat-menu-item class="text-primary">ID: {{course.id}}</div>            <a mat-menu-item [routerLink]="[\'trabajo\',course.id]">Trabajo de clase</a>            <a mat-menu-item href="{{course.alternateLink}}" target="_blank">Ir al curso</a>          </mat-menu>          <!-- --------------------------------->        </mat-card-title>        <mat-card-subtitle>          {{course.ownGivenName + \' \' + course.ownFamilyName}}        </mat-card-subtitle>      </mat-card-header>      <mat-card-content>        {{course.descHeading}}        {{course.desc}}        <!-- <p>                Fecha de Creación: {{course.creationTime|date:\'medium\'}}<br>                Última modificacion: {{course.updateTime|date:\'medium\'}}<br>              </p> -->      </mat-card-content>      <mat-card-actions>        <fa-icon class="px-1" [ngClass]="(course.guardiansEnabled) ? \'text-success\' : \'text-danger\'"          [icon]="(course.guardiansEnabled) ? faChalkboardTeacher : faChalkboardTeacher"          matTooltip="{{(course.state==\'ACTIVE\') ? \'Informe a tutores Activado\' : \'Informe a tutores Desactivado\'}}"          matTooltipPosition="above">        </fa-icon>      </mat-card-actions>    </mat-card>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AlumnoComponent', 'selector': 'app-alumno'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClaseComponent', 'selector': 'app-clase'},{'name': 'ClasesComponent', 'selector': 'app-clases'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'EntregasComponent', 'selector': 'app-entregas'},{'name': 'FirebaseDbComponent', 'selector': 'app-firebase-db'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MaestroComponent', 'selector': 'app-maestro'},{'name': 'ShellComponent', 'selector': 'app-shell'},{'name': 'ToolbarComponent', 'selector': 'app-toolbar'},{'name': 'TrabajoClaseComponent', 'selector': 'app-trabajo-clase'},{'name': 'TrabajoClaseListaComponent', 'selector': 'app-trabajo-clase-lista'},{'name': 'TrabajoComponent', 'selector': 'app-trabajo'},{'name': 'UserComponent', 'selector': 'app-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ClasesComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ClasesComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -9,7 +9,7 @@ export const environment = {
     messagingSenderId: '1020513677714',
     appId: '1:1020513677714:web:c79ee8ffaad1701a49114b',
     measurementId: 'G-PPT30G5V7L',
-    client_id:
+    clientId:
       '1020513677714-ofv47efcialie29s5vrn6clgc4fdphc6.apps.googleusercontent.com',
     discoveryDocs: [
       'https://classroom.googleapis.com/$discovery/rest?version=v1',

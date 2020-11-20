@@ -11,6 +11,7 @@ import 'firebase/auth';
 
 import { environment } from './../environments/environment';
 
+import { Course } from './classroom.model';
 import { CourseInfo } from './course-info.model';
 /// <reference path="../../node_modules/@types/gapi/index.d.ts" />
 declare var gapi;
@@ -21,12 +22,13 @@ declare var gapi;
 export class AuthService {
   user$: Observable<firebase.User>;
   clase$: Observable<any>;
-  classroomUser: any;
+  coursesInfo$: Observable<any[]>;
   courses$: Observable<any[]>;
   courses: any[];
   results: any;
   coursesArray: CourseInfo[];
   isQuery = false;
+  classroomUser: any;
   constructor(
     public afAuth: AngularFireAuth,
   ) {
@@ -39,10 +41,9 @@ export class AuthService {
       console.log('loaded client');
       gapi.client.init({
         apiKey: environment.firebaseConfig.apiKey,
-        client_id: environment.firebaseConfig.client_id,
+        client_id: environment.firebaseConfig.clientId,
         discoveryDocs: environment.firebaseConfig.discoveryDocs,
         scope: environment.firebaseConfig.scope,
-        privacy_policy: 'https://fb-goo-api.web.app/privacy-policy'
       });
       gapi.client.load('classroom', 'v1', () => {
         console.log('loaded classroom');
@@ -63,28 +64,64 @@ export class AuthService {
       this.afAuth.signOut();
     });
   }
-
-
-  async getCoursework(cid: string) {
+  /**
+   * Returns a list of student submissions that the requester is permitted to view,
+   * factoring in the OAuth scopes of the request.
+   * "-" may be specified as the courseWorkId to include student submissions for
+   * multiple course work items.
+   * @param cid the course ID
+   * @param cwid the courseWork ID
+   */
+  async getStudetSubmission(cid: string, cwid: string) {
     let params = { courseId: cid };
-    let coursesWork = await gapi.client.classroom.courses.courseWork.list(params).then(res => {
-      if (res.result.courseWork !== []) {
-        return res.result.courseWork;
-      } else {
-        return [];
-      }
-    }).catch(err => {
-      //console.log(err)
-      return [];
-    });
-    // console.log(coursesWork);
-    if (coursesWork === undefined) {
-      coursesWork = [];
+    let studentSubmission = await gapi.client.classroom.courses.courseWork.studentSubmission.list(params)
+      .then(res => {
+        if (res.result.studentSubmissions !== []) {
+          return res.result.studentSubmissions;
+        } else {
+          return [];
+        }
+      }).catch(err => {
+        if (err.code.status === 'NOT_FOUND') {
+
+        } else if (err.code.status === 'INVALID_ARGUMENT') {
+
+        } else if (err.code.status === 'PERMISSION_DENIED') {
+
+        }
+      });
+    console.log(studentSubmission);
+    if (studentSubmission === undefined) {
+      studentSubmission = [];
     }
-    return coursesWork;
+    return studentSubmission;
   }
   /**
-   * A promise to retrive a CourseWork[] as any according to permissions access user logged in Google Classroom
+   * A promise to retrive a CourseWork[] as any according to permissions access
+   * user logged in Google Classroom
+   * @param cid Course ID
+   */
+  async getCoursework(cid: string) {
+    const params = { courseId: cid };
+    let courseWork = await gapi.client.classroom.courses.courseWork.list(params)
+      .then(res => {
+        if (res.courseWork !== []) {
+          return res.courseWork;
+        } else {
+          return [];
+        }
+      }).catch(err => {
+        // console.log(err)
+        return [];
+      });
+    // console.log(coursesWork);
+    if (courseWork === undefined) {
+      courseWork = [];
+    }
+    return courseWork;
+  }
+  /**
+   * A promise to retrive a CourseInfo object as any according to permissions access user logged in Google Classroom
    * @param uid User UID from providerData on Google SignIn firebase.User
    * @param role (Optional) string as selector to filter the response to those courses in role. Could be 'STUDENT' or 'TEACHER'
    */
@@ -128,6 +165,7 @@ export class AuthService {
       };
       coursesInfo.push(courseInfo);
     });
+    this.coursesInfo$ = courseInfo;
     return coursesInfo;
   }
   async getCourseInfo(cid: string) {
@@ -246,32 +284,10 @@ export class AuthService {
   }
 
   async listCourses() {
-    const response = await gapi.client.classroom.courses.list();
-    const result = response.result;
-    const data = result.courses.map((course: { id: string; ownerId: any; name: any; section: any; room: any; description: any; descriptionHeading: any; creationTime: any; updateTime: any; guardiansEnabled: any; alternateLink: any; }) => {
-      let ownerName = gapi.client.classroom.courses.teachers.get({ courseId: course.id, userId: course.ownerId }).then(() => {
-        return ownerName;
-      });
-      let teacherGroup = this.listTeachers(course.id).then(teachers => {
-        return teacherGroup = teachers;
-      });
-      return {
-        courseId: course.id,
-        courseName: course.name,
-        section: course.section,
-        room: course.room,
-        desc: course.description,
-        descHeading: course.descriptionHeading,
-        creationDate: course.creationTime,
-        lastUpdate: course.updateTime,
-        guardiansEnable: course.guardiansEnabled,
-        alternateLink: course.alternateLink,
-        ownerName: ownerName,
-        teachersList: teacherGroup,
-      };
-    })
-    console.log(data);
-    this.courses$ = data;
-    return data;
+    let courses: Course[];
+    courses = await gapi.client.classroom.courses.list().then(res => {
+      return courses = res.result.courses;
+    });
+    return courses;
   }
 }

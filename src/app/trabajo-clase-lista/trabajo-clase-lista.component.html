@@ -1,41 +1,64 @@
-<form [formGroup]="searchForm" class="search__form">
-
+<form [formGroup]="searchForm" fxLayout="row" fxLayoutAlign="end">
   <!-- <mat-form-field class="search__form_field" appearance="outline">
       <mat-label>Departure station</mat-label>
       <input type="text" aria-label="Departure station" matInput formControlName="departureStation"
         (keyup)="applyFilter()">
     </mat-form-field>
+ -->
 
-     <mat-form-field class="search__form_field" appearance="outline">
-      <mat-label>Arrival station</mat-label>
-      <input type="text" aria-label="Arrival station" matInput formControlName="arrivalStation" (keyup)="applyFilter()">
-    </mat-form-field>
-   -->
-  <mat-form-field class="search__form_field" appearance="outline">
-    <mat-label>Fecha de Creación</mat-label>
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <input type="text" aria-label="Título del al actividad" matInput formControlName="courseWorkTitle"
+      (keyup)="applyFilter()" (click)="searching=true">
+    <button mat-icon-button matSuffix (click)="courseWorkTitle=''; applyFilter(); searching= !searching" color="accent">
+      <mat-icon *ngIf="!searching">search</mat-icon>
+      <mat-icon *ngIf="searching">clear</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Fecha de creación</mat-label>
     <input matInput formControlName="creationTimeSearch" [matDatepicker]="picker" (dateInput)="applyFilter()">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </form>
-<table mat-table class="full-width-table" matSort aria-label="Elements">
+<table mat-table class="full-width-table" matSort aria-label="Course work table">
   <!-- Id Column -->
-  <ng-container matColumnDef="id">
+  <!-- <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
     <td mat-cell *matCellDef="let row">{{row.id}}</td>
-  </ng-container>
-
-  <!-- Name Column -->
+  </ng-container> -->
+  <!-- Title Column -->
   <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Título</th>
     <td mat-cell *matCellDef="let row">{{row.title}}</td>
   </ng-container>
+  <ng-container matColumnDef="state">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+    <td mat-cell *matCellDef="let row">{{row.state|keyvalue}}</td>
+  </ng-container>
   <ng-container matColumnDef="creationTime">
-    <th mat-header-cell *matHeaderCellDef>Fecha de creación</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha de creación</th>
     <td mat-cell *matCellDef="let row"> {{row.creationTime|date:'medium'}} </td>
   </ng-container>
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let row">
+      <a mat-button [routerLink]="['entregas',row.id]">
+        <fa-icon [icon]="faEdit"></fa-icon>
+      </a>
+    </td>
+  </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row"
+    [class.expanded]="expandedElement == row" (click)="expandedElement = row"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow"
+    [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'" style="overflow: hidden">
+    <!-- Row shown when there is no matching data.-->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No hay actividades que coincidan con la búsqueda "{{courseWorkTitle}}"</td>
+  </tr>
 </table>
 
 <mat-paginator [ngStyle]="{'background-color':'inherit'}" #paginator [length]="dataSource?.data.length" [pageIndex]="0"
